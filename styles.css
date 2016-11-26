@@ -1,0 +1,750 @@
+
+/*-- CSS by joachim byrnes-shay for assignment 2 */
+
+
+
+/* box sizing */
+html {
+	box-sizing: border-box;
+	}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+.change {
+	background: blue;
+}
+#homepage button {
+	width: 100px;
+	height: 40px;
+	margin-left: 10px;
+}
+body {
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    /*allow room for footer with margin-bottom*/
+	margin-bottom: 40px;
+	background: white;
+	/*min-width for my own taste, to stop breaking on resize*/
+	min-width: 40em;*/
+	/*background: #fdfdfb;;*/
+	background: #FBF9F9;
+	color: black;
+	/*baseline*/
+	position: relative;
+	width:  100%;
+}
+
+/* general hover state link styling for site */
+a:hover {
+	color: black;
+	background: #97f3f8;
+	font-style: italic;
+	font-weight: bolder;
+}
+
+/*===header and nav styling section ===*/
+/*header and nav are styled as fixed, some effort was made to stop it breaking on resize for my own taste */
+header {
+    width: 100%;
+    /*keep min width as body */
+    min-width: 40em;
+    margin-top: 0;
+    /*fix the header, which includes h1, skiplink, nav links */
+    position: fixed;
+	top: 0;
+	left: 0;
+    border: 1px solid green;
+    /*allow room for all elements in heading */
+	height: 6em;
+	padding-left: 2em;
+	/*gradient to style header */
+    /*background: -moz-linear-gradient(top,  rgba(30,87,153,1) 0%, rgba(125,185,232,.8) 100%); /* FF3.6-15 */
+    /*background: -webkit-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(125,185,232,.8) 100%); /* Chrome10-25,Safari5.1-6 */
+   /* background: linear-gradient(to bottom,  rgba(30,87,153,.9) 0%,rgba(125,185,232,.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    border-bottom: 2px brown solid;
+    border-top: 1px brown solid;
+    z-index: 5;
+}
+
+/* skiplink styling, skip to main content,, method from UMN accessibility as referred in course material */
+a.sronly {
+    position: absolute;
+	left: -10000px;
+	top: auto;
+	text-align: left;
+	width: 1px;
+	height: 1px;
+	overflow: auto;
+}
+a.sronly:focus {
+	background: orange;
+	position: static;
+	float: left;
+	font-size: .9em;
+	padding: 10px 5px 5px 10px;
+	margin: 5px 0 0 30px;
+	height: 35px;
+	text-align: center;
+	width: 200px;
+	text-transform: uppercase;
+	overflow: initial;
+}
+/* end skiplink styling */
+
+
+/* site h1 is inside the header */
+h1 {
+	color:brown;
+	background: #f8e2d3;
+	background: #f2e3d9;
+	padding: .3em .5em .3em .5em;
+ 	width: 30%;
+	min-width: 200px;
+	font-size: 1.2em;
+	float: left;
+	margin: 0px;
+	height: 40px;
+    border-radius: 5px;
+}
+/* nav links for home and itinerary page are in nav, nav ul, li */
+nav {
+	 
+	margin-top:0;
+	width: 100%;
+	margin: 0 auto;
+	padding: 1.5em 0 1.5em 0;
+	
+}
+nav ul {
+    list-style-type:none;
+    text-transform: uppercase;
+	text-align: right;
+	padding-right: 70px;
+	/*absolute positioning was important to get the nav links placed correctly*/
+	position:absolute;
+	top: 0;
+	width: 100%;
+	margin: 0 auto;
+	
+}
+
+/*use inline block to style main site navigation in nav bar, enclosed in header*/
+nav ul li{
+    display: inline-block;
+	margin-left:20px;
+	position: relative;
+	margin-top:2em;
+
+}
+nav a {
+    text-decoration: none;
+	background: white;
+	background:  #f2e3d9;
+	background: #fae1d1;
+	border: solid 1px white;
+	border-radius: 150px;
+	padding: 5px;
+	font-weight: bolder;
+	font-size: 1.1em;
+	color: midnightblue;
+
+}
+/*specific additions to styling for navigation link hover state */
+nav a:hover {
+	background:orange;
+	border: 1px solid black;
+	font-size: 1.1em;
+	padding: 10px;
+}
+
+/* use boxshadow in navigation links and header h1 */
+nav a, h1 {
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+/* this is the fontawecome home icon */
+fa-home {
+	color: #a0615f;
+	padding-right: .25em;
+}
+ 
+
+
+
+/*end header and nav styling section */
+
+
+/*=== begin main content styling section ===*/
+
+/*clear floats, used frequently to demonstrate if you float you must clear*/
+br.clearfix {
+	clear: both;
+} 
+
+h1, .sr-only {
+	display:inline-block;
+}
+
+/*=== general element and sectioning styling ===*/
+
+main {
+	overflow: auto;
+}
+/* base link styling for site */
+main a {
+	font-weight: bold;
+	color: blue;
+}
+article {
+	display: inline-block;
+	margin-top: 0em;
+	width: 100%;
+}
+
+/*=== styling of headings, sitewide ===*/
+
+/* googlefont webfont used for h1, h2, h3 sitewide */
+h1, h2, h3 {
+	font-family: 'Allerta';
+	text-transform: uppercase;
+	text-align: center;
+}
+h2 {
+	margin-top: 0;
+	padding-bottom: .5em;
+	padding-top: 1em;
+	border-bottom: 1px solid black;
+	background: rgb(249,221,169); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(249,221,169,1) 0%, rgba(255,251,245,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(249,221,169,1) 0%,rgba(255,251,245,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(249,221,169,1) 0%,rgba(255,251,245,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	border-radius: 10px;
+}
+h4 {
+	background: #a2f7eb;
+	color: purple;
+}
+h3 {
+ background: #fae1d1;
+} 
+/* end headings styling */
+
+
+/* overall site 3-column layout styling, some of which is overridden where needed by styling blocks for page 2 below*/
+#leftcol {
+	margin-top: 6.6em;
+	width: 40%; 
+	float: left;
+	font-size: .9em;
+	padding: 0 25px 0 25px;
+	bottom: 0;
+	 
+}
+ 
+#centercol {
+	width: 40%;
+	float: left;
+	margin-top: 6.6em;
+	border-left: 1px solid red;
+	border-right: 1px solid red;
+	font-size: .9em;
+	height: auto;
+	max-width: 40%;
+	padding: 0 25px 0 25px;
+}
+#rightcol {
+	/*float: right;*/
+	float: right;
+	width: 20%;
+	word-wrap: break-word;
+	font-size: .9em;
+	margin-top: 6.6em;
+	bottom: 0;
+	padding: 0 25px 0 25px;
+}
+/* end overall site page styling (3 column format) */
+
+/*style multiple columns for text section inside page's left column article*/
+#columncount {
+
+-webkit-column-count: 3;
+ -moz-column-count: 3;
+ column-count: 3;
+ -webkit-column-gap: 30px;
+ -moz-column-gap: 30px;
+ column-gap: 30px;
+}
+/*fix gap above first column*/
+#leftcol article div p:first-of-type {
+	margin-top: 0;
+}
+ 
+
+
+
+
+/*-- begin sitewide footer styling section --*/
+ 
+footer#pagefooter {
+	font-size: .8em;
+	margin-top: 3em;
+	position: fixed;
+    bottom: 0;
+	left:0;
+	right: 0;
+	border: 1px solid red;
+    height: 40px;
+    width: 100%;
+    background: -moz-linear-gradient(top,  rgba(30,87,153,1) 0%, rgba(125,185,232,.7) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(125,185,232,.7) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(30,87,153,1) 0%,rgba(125,185,232,.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    color:black;
+    text-align:center;
+    overflow: auto;
+}
+/*style copywrite mark in sitewide footer */
+footer p#copywrite {
+    background: black;
+    border: 2px solid red;
+	border-radius: 5px;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	color:white;
+	width: 15%;
+	font-weight: bolder;
+	text-transform: uppercase;
+	font-family: 'Allerta', Arial, sans-serif;
+	display: inline-block;
+	margin: 0 auto;
+}
+/* 'contact me' link in sitewide footer */
+footer #contact {
+	background: black;
+    border: 2px solid red;
+	border-radius: 5px;
+	display:inline-block;
+	margin: 0;
+	padding: 0 0 0 0;
+	color:white;
+	width: 10%;
+	text-align: left;
+	font-weight: bolder;
+	text-transform: uppercase;
+	font-family: 'Allerta', Arial, sans-serif;
+	float: left;
+}
+#contact p {
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+#contact address {
+	display: inline;
+}
+#contact a {
+	color: white;
+}
+#contact a:hover {
+	color: black;
+}
+/* style offsite links to css validator and html validator */
+footer a[href*="jigsaw"]{
+	float: right;
+	padding-right: 1em;
+	margin-top: .3em;
+}
+footer a[href*="nu"] {
+	margin-top: .3em;
+	background: orange;
+	color: black;
+	float: right;
+	text-transform: uppercase;
+	font-weight: bolder;
+	font-size: 1.1em;
+	padding: .25em;
+}
+a[href*="jigsaw"]:hover, a[href*="nu"]:hover {
+	background: #97f3f8;
+}
+
+
+/* end sitewide footer styling section */ 
+
+
+/*=== page 1-specific styling ===*/
+
+/* page 1 right column */
+
+#rightcol aside {
+    background: #fae1d1;
+	border: 1px solid black;
+	border-radius: 10px;
+	width: 80%;
+	margin: 0 auto 0 0;
+	text-transform: uppercase;
+	font-size: .9em;
+	font-weight:bold;
+	margin-top: 1em;
+	position: relative;
+
+
+}
+
+
+  
+/*styles 'popular foods in tibet' heading, page 1 */
+#rightcol aside h2 {
+	text-align: center;
+	border: 1px solid black;
+	background: orange;
+	color: black;
+	font-weight:bold;
+	font-size: 1.1em;
+}
+/* page 1 rightcolumn list */
+#rightcol ul {
+	width:80%;
+	margin: 0;
+	padding: 0 0 0 2em;
+	margin: 0 auto;
+}
+#rightcol ul li {
+	padding: 10px;
+}
+/*uniquely styles first letter of first word on page 1 rightcolumn list */
+#rightcol li::first-letter {
+font-size: 1.45em;
+font-weight: bold;
+font-family: serif;
+}
+ 
+/*page 1 jokhang temple image, figure, figcaption, content styling */
+ #jokhang {
+	background: #a2f7eb;
+	text-align: center;
+	display: block;
+	border: 1px solid black;
+	border-radius: 10px;
+	width: 80%;
+	margin: 4em auto 0 auto;
+}
+#rightcol figure {
+	margin: 0 auto;
+	width: 80%;
+	 
+}
+/* uniquely styles hover background of figure link, due to conflicting contrast with main styling*/
+figure a:hover {
+	background: #fae1d1;
+}
+#rightcol figure + p {
+	 
+	text-align: left;
+	width: 80%;
+	margin: 0 auto;
+	padding: 1em 0 1em 0;
+}
+#rightcol img {
+	width: 100%;
+	margin: 0 auto;
+	border-radius: 10px;
+}
+figcaption {
+	text-align:left;
+	padding-bottom: 1em;
+	padding-left: 0em;
+}
+figcaption p {
+	font-size:.8em;
+	display: block;
+	margin-bottom: 1em;
+	margin-top: 0;
+}
+/*end styling of jokhang temple image and figure block, page 1*/
+ 
+
+
+/*-- styling for page 1 table --*/
+
+/* id tableblock allows combining table with its footer for styling as a group*/
+#tableblock {
+	background: #a2f7eb;
+	margin: 0 auto;
+	width: 96%;
+	padding-bottom: 1.5em;
+	border: 1px solid black;
+	margin-top: 3em;
+	border-radius: 10px;
+}
+ table {
+	/*fixed allows some resizing without breaking*/
+	table-layout: fixed;
+	font-weight: bolder;
+	color: black;
+	background: #fae1d1;
+	border-collapse: collapse;
+	text-transform: uppercase;
+	padding: 1em;
+	width: 100%;
+ 	padding: 1em;
+	margin: 10px auto;
+}
+table caption {
+	border-top: 1px solid black;
+	background: #a2f7eb;
+	background: rgba(249,221,169,1);
+	color: brown;
+	font-size: 1.2em;
+	font-weight:bolder;
+	margin-top: 1em;
+	padding-top: 1.25em;
+	padding-bottom: 1.25em;
+}
+td, th{
+	padding: .4em;
+	/*stop breaks on major resize, for my own taste*/
+	word-break: break-all;
+}
+td {
+	border: 1px solid black;
+	text-align:left;
+}
+th {
+	text-align: center;
+	background: #faf0e6;
+}
+/*table footer is here */
+table + footer {
+	background: #f2e3d9;
+	width: 80%;
+	margin: 0 auto;
+	padding: .75em;
+}
+/*display of weblink citations for altitude and distance*/
+table + footer p {
+	background: #f2e3d9;
+	padding: .1em;
+	margin: .2em 0em .2em 0em;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	font-size: .8em;
+	display: block;
+}
+/* end page 1-specific styling section */  
+ 
+
+
+/*=== start page 2-specific styling ===*/
+/**/
+blockquote {
+	margin: 2em auto 0 auto;
+	position: relative;
+	height:160px;
+	width:200px;
+	border: 1px solid black;
+	font-weight: bolder;
+	font-size: 1.1em;
+	color: black;
+	border-radius: 10px;
+}
+/*style blockquote for transparent background image */
+blockquote::after {
+  content: "";
+  background: url(images/background2.png) no-repeat;
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+blockquote p {
+	padding-left: 1em;
+	padding-top: 1.5em;
+}
+.cite {
+	text-indent: 25px;
+	font-size: .9em;
+}
+
+
+/*style page 2 rightcolumn list*/
+#pg2maincontent section#rightcol ul {
+	width: 100%;
+	padding-right: 1em;
+}
+#pg2maincontent section#rightcol li {
+	font-size: .9em; 
+}
+/* allows me to style my h4 inline with paragraph content in center column, for design reasons */
+#pg2maincontent #centercol article p:not(.imgcopywrite), #pg2maincontent #centercol h4 {
+	display: inline;
+}
+
+ 
+/*style page 2 centercolumn */
+#pg2maincontent #centercol p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+#pg2maincontent div {
+	 float: left;
+	 margin-bottom: 1em;
+	 margin-top: 0;
+	 padding-top: 0;
+}
+#pg2maincontent article:nth-of-type(2) {
+	margin-top: 1em;
+}
+#pg2maincontent #centercol article {
+	padding-bottom: 0;
+	border-bottom: 1px solid red;
+}
+
+ 
+/*style page 2 images */
+#pg2maincontent img {
+	margin: .5em;
+	border: 1px solid black;
+	border-radius: 10px;
+	width: 90%;
+}
+img[src*="sera"] {
+	 margin-top: 0;
+}
+
+/*end page 2-specific styling section */
+
+
+
+/*== this was practice to make the site look better if I resized windows==*/
+/*it made the page function better so I kept it in, you may ignore*/
+
+@media only screen and (max-width: 1100px) {
+
+   h1 { font-size: 1em;
+   	padding-top: .4em;
+
+    }
+    nav a {
+    	font-size: .9em;
+    }
+
+}
+@media only screen and (max-width: 905px) {
+
+   h1 { font-size: .9em;
+     }
+	nav a {
+		font-size: .8em;
+	}
+}
+@media only screen and (max-width: 505px) {
+	h1 { font-size: .8em;
+    }
+	nav a {
+		font-size: .7em;
+	}
+}
+/*end @media only block*/
+ 
+
+/*new styles */
+input:invalid {
+	border: 4px solid red;
+	 
+}
+form {
+	position: relative;
+	padding: .5em;
+	
+}
+#titlelab {
+	visibility:hidden;
+}
+#timemessage {
+	visibility:hidden;
+	display:none;
+	border: 1px solid black;
+	display: inline-block;
+	position: relative;
+	z-index:5;
+	background: aqua;
+	color: brown;
+	border-radius: 25px;
+	right: -30px;
+	top: -10px;
+	font-size: .75em;
+	padding: 0 .4em 0 .4em;
+
+}
+#goodtime {
+	background: orange;
+}
+input[type='range'] {
+	background: blue;
+	color: blue;
+}
+#rangefill {
+	border: 2px solid black;
+	display: inline-block;
+	width: 2em;
+	height: 1.75em;
+	padding: .25em;
+	margin-left: .5em;
+}
+input[type=radio]:invalid {
+	background: red;
+}
+ 
+ 
+#rangestyle {
+	background: blue;
+	padding: .25em;
+}
+#nameerror, #gendererror {
+	height: 1.5em;
+}
+.error {
+	border: 2px solid red;
+	background: red;
+	color: white;
+}
+
+#canvasPage h1 {
+	float: none;
+	display: block;
+}
+canvas  {
+	border: 1px solid black;
+}
+
+ #canvasPage div {
+ 	width: 32%;
+ 	margin-right: 1%;
+ 	float: left;
+ 	display: inline-block;
+ }
+ #canvasPage button {
+ 	display: inline-block;
+ 	 
+ }
+ #canvasPage div#meme {
+ 	clear: both;
+ 	margin-top: 1em;
+
+
+ }
+#animwriter {
+	margin-top: 1em;
+}
+
+.disable {
+	visibility: hidden;
+}
+
