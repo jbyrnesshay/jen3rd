@@ -60,3 +60,11 @@ width: 800px;
 form {
 	position: relative;
  }
+ input[type="email"], input[type="text"] {
+ 	display: block;
+ }
+ textarea {
+ 	height: 170px;
+ 	width: 350px;
+ 	display: block;
+ }

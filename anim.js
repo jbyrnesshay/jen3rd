@@ -121,6 +121,15 @@ $(document).ready(function(){
 	   			fontFamily: 'arial, sans-serif',
 		  	 	layer:true,
 		  	 	text: 'email'
+  			}).
+  			drawText({
+		  		fillStyle: '#fff',
+	   			x: 350,
+	   			y: 275,
+	   			fontSize:  '1.4em',
+	   			fontFamily: 'arial, sans-serif',
+		  	 	layer:true,
+		  	 	text: 'photo'
   			});
 	}//end place text on canvas
 
@@ -214,7 +223,18 @@ $(document).ready(function(){
 		 		  layer: true,
 		 		  name: 'emailto',
 		 		  
-		 		 });
+		 		 }).
+		 	drawRect({
+		 		 strokeStyle: '#909',
+		 		  strokeWidth: 5,
+		 		  fillStyle: '#f0f',
+		 		  x: 350, 
+		 		  y: 275,
+		 		  width: 100,
+		 		  height: 50,
+		 		  layer: true,
+		 		  name: 'see photo',
+		 		});
 		 	//add text 
 		 	walltext();
 	}//end set non-character display on canvas

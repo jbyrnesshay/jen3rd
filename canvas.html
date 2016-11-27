@@ -56,10 +56,14 @@
 	 
  
     <div id="right">
-      <p>test this</p>
+     
+        <label for="email">this will open your default mail client</label>
       	<form id="email">
             <input type="radio" value="test">test
-      	   <input type="text" placeholder="send an email">
+      	   <input type="email" placeholder="recipient address">
+           <input type="text" placeholder="subject">
+           <textarea id="message"></textarea>
+           <button id="emailsend">send</button>
       	</form>
 	 </div>
 
