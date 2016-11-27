@@ -1,0 +1,45 @@
+#canvasPage h1 {
+	float: none;
+	display: block;
+}
+canvas  {
+	border: 1px solid black;
+}
+
+ #canvasPage div {
+ 	width: 32%;
+ 	margin-right: 1%;
+ 	float: left;
+ 	display: inline-block;
+ }
+ #canvasPage button {
+ 	display: inline-block;
+ 	 
+ }
+ #canvasPage div#meme {
+ 	clear: both;
+ 	margin-top: 1em;
+
+
+ }
+#animwriter {
+	margin-top: 8em;
+}
+
+
+/*div#emailer{
+	margin-top: 8em;
+	float:left;
+	visibility: hidden;
+	display:inline-block;
+	width: 10%;
+}*/
+.enable {
+	visibility: visible;
+}
+.disable {
+	visibility: hidden;
+}
+#canvas1, #canvas2, #canvas3, #meme {
+	display:none;
+}

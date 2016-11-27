@@ -1,30 +1,130 @@
 $(document).ready(function() {
+		//sets animateable character figure variable
+		var figure = '';
+		//is the game start button clicked
+		$('#startfun').click(function(){
+		 	 figure = $('#character').val();
+			 placeCharacter();
+			 placeSetting();
+		});
+		//restart button functioning
+		$('#restart').click(function() {
+			$('#character').removeClass('disable');
+			$('#anim').removeLayers().drawLayers();
+			$('#character').val('default');
+			$('body').css("background", "white");
+		});
 
-	 
-	var figure = '';
-	$('#startfun').click(function(){
-	 	 
-		figure = $('#character').val();
-		//alert(figure)
-		 stickit();
-	 
-	});
-	$('#restart').click(function() {
-		$('#character').removeClass('disable');
-		$('#anim').removeLayers().drawLayers();
-		$('#character').val('default');
-		$('body').css("background", "white");
-	})
-	function stickit() {
-		//alert('in');
+	
+	
+		//keydown listenere to control character motion
+		$(document).keydown(function(event) {
+			var keypress=event.which;
+			switch(keypress){
+			  	    
+				case 38:
+				 		if (posy-25 >=25){
+				 			test = $('#anim').getLayer(figure);
+					 		$('#anim').animateLayer(test, {
+					 			y: '-=25'
+					 			}, 50);
+					 		posy = posy - 25;
+					 	}
+						break;
+				case 40:
+						if (posy + 25 <=275){
+							$('#anim').animateLayer(figure, {
+							y: '+=25'
+							}, 50);
+							posy = posy +25;
+						}
+						break;
+				case 37:
+						if ((posx-25 >= 25)) {
+							$('#anim').animateLayer(figure, {
+								x: '-=25'
+							}, 50);
+							posx = posx - 25;
+						}
+						break;
+				case 39: 
+						if ((posx+25 <=775)) {
+							$('#anim').animateLayer(figure, {
+								x: '+=25'
+							}, 50);
+							posx =  posx + 25;
+						}
+						break;
+				default:
+				//$('#anim').stopLayer('myBox');
+						$('body').css(
+							"background", "white"
+						)
+					break;
+			 }//end switch
+
+			 //inspect and display x and y position
+		 	var contents = posx + '&nbsp;&nbsp;&nbsp;' +posy +'&nbsp;&nbsp;&nbsp;' +status;
+		 	$('#fill').html(contents);
+		 	//instance of email form open function below depends on character position as controlled above
+		 	//email();
+
+		 	//if character moves inside of 'change background ' box, background color is changed
+		 	if (posy <=25 && (posx >=500 && posx <=700)) {
+		 		setTimeout(function() {
+				 		$('body').css(
+		 		 		"background", "blue" 
+		 				);
+				 	}, 100);
+		 	}
+		 	
+		 	
+			else {
+			 		$('body').css(
+			 			"background", "white"
+			 		);
+			}//end if else
+		 });//end keydown
+
+
+
+//functions 
+
+
+	function walltext() {
+			$('#anim').drawText({
+		  		fillStyle: '#fff',
+	   			x: 600,
+	   			y: 25,
+	   			fontSize:  '1.4em',
+	   			fontFamily: 'arial, sans-serif',
+		  	 	layer:true,
+		  	 	text: 'change background'
+  			}).
+  			//chaning here
+  			drawText({
+		  		fillStyle: '#fff',
+	   			x: 750,
+	   			y: 200,
+	   			fontSize:  '1.4em',
+	   			fontFamily: 'arial, sans-serif',
+		  	 	layer:true,
+		  	 	text: 'email'
+  			});
+	}//end place text on canvas
+
+//display animatable character
+	function placeCharacter() {
+		//disable select box once character is selected
 		$('#character').addClass('disable');
+
 		switch(figure) {
 			case 'circle':
 				$('#anim').drawArc({
 					strokeStyle: '#909',
 					strokeWidth: 5,
-					x: 50,
-					y: 50,
+					x: 100,
+					y: 100,
 					radius: 25,
 					fillStyle: '#f0f',
 					layer: true,
@@ -32,6 +132,7 @@ $(document).ready(function() {
 					draggable: true
 				});
 				var ty = $('#anim').getLayer('circle');
+				//keep track of x and y in order to implement movement boundaries in keydown function below
 				posx= ty.x;
 				posy=ty.y;
 			break;
@@ -41,8 +142,8 @@ $(document).ready(function() {
 					strokeWidth: 5,
 					fillStyle: '#f0f',
 					x: 100, y: 100,
-					width: 100,
-					height: 100, 
+					width: 50,
+					height: 50, 
 					layer: true,
 					name: 'square',
 					draggable: true,
@@ -55,11 +156,11 @@ $(document).ready(function() {
 				$('#anim').drawSlice({
 					strokeStyle: '#909',
 					strokeWidth: 5,
-					x: 50,
-					y: 100,
+					x: 25,
+					y: 50,
 					radius: 50,
 					start: 0,
-					end: 45,
+					end: 90,
 					fillStyle: '#f0f',
 					layer: true,
 					name: 'pie',
@@ -67,92 +168,64 @@ $(document).ready(function() {
 					fromCenter: false
 				});
 				var ty = $('#anim').getLayer('pie');
-				posx= ty.x;
-				posy=ty.y;
+				//make adjustments in perceived x, y location for pieslice due to asymmetry
+				posx= ty.x +75;
+				posy=ty.y +25;
 			break;
 			default:
-
 				alert('you did not select');
 				break;
 		}//end switch figure*/
-		//var fun = $('#anim').getLayer(0).name;
-		//return fun;
-	}//end stickit
+	}//end placeCharacter
 
-	 
- 
-	$(document).keydown(function(event) {
-		 var keypress=event.which;
-		  switch(keypress){
-			 	case 38:
-			 		if (posy-25 >=25){
-			 			test = $('#anim').getLayer(figure);
-				 	$('#anim').animateLayer(test, {
-				 		y: '-=25'
-				 	}, 50);
-				 	
-				 	posy = posy - 25;
-				 }
-					break;
-				case 40:
-					if (posy + 25 <=275){
-					$('#anim').animateLayer(figure, {
-						y: '+=25'
-					}, 50);
-					posy = posy +25;
-				}
-					break;
-				case 37:
-					if ((posx-25 >= 25)) {
-					$('#anim').animateLayer(figure, {
-						x: '-=25'
-					}, 50);
-					posx = posx - 25;
-					}
-					break;
-				case 39: 
-					if ((posx+25 <=775)) {
-					$('#anim').animateLayer(figure, {
-						x: '+=25'
-					}, 50);
-					posx =  posx + 25;
-				}
-					break;
-				default:
-					$('#anim').stopLayer('myBox');
-					$('body').css(
-						"background", "white"
-					)
-					
-					break;
-		 	}
-
-		 	if (posy <=50) {
-		 		setTimeout(function() {
-				 		$('body').css(
-		 		 		"background", "blue" 
-		 				);
-				 	}, 100);
-		 	}
-		 	else if (posy >=250) {
-		 		setTimeout(function() {
-		 			$('body').css(
-		 				"background", "red");
-		 		}, 100);
-
-		 		}
-		 	
-		 else if (posy >50 && posy <250) {
-		 			$('body').css(
-		 			"background", "white"
-		 			);
-		 		}
-		 });
-});
+	//draw non-character graphics on canvas
+	function placeSetting() {
+		 	$('#anim').drawRect({
+				strokeStyle: '#909',
+				strokeWidth: 5,
+				fillStyle: '#f0f',
+				x:600 , y: 25,
+				width: 250,
+				height: 50, 
+				layer: true,
+				name: 'changebgplace'
+			}).
+			//chaining here
+		 	drawRect({
+		 		  strokeStyle: '#909',
+		 		  strokeWidth: 5,
+		 		  fillStyle: '#f0f',
+		 		  x: 750, 
+		 		  y: 200,
+		 		  width: 100,
+		 		  height: 100,
+		 		  layer: true,
+		 		  name: 'emailto',
+		 		  
+		 		 });
+		 	//add text 
+		 	walltext();
+	}//end set non-character display on canvas
 
 
+
+
+
+	//target for opening emailto form
+	function email() {
+		//is x, y position of character at target
+		if (posy <=225 && posy>=175 && posx >=725 && posx <=775) {
+			 		status = 'inside email';
+			 		$('#emailer').addClass('enable');
+		}
+	    else {
+	    	$('#emailer').removeClass('enable');
+	    	status = 'not inside email';
+		}
+		 
+	}//end email function */
 
 
  
- 
+ });
  

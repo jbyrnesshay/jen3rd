@@ -3,96 +3,63 @@
   <head>
     <title>canvas</title>
     <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="canvasstyles.css" rel="stylesheet" type="text/css">
     <meta charset="utf-8">
   </head>
   <body id="canvasPage">
-  <header>
-			<!-- for screenreaders that are not up-to-date and for the purposes of the course requirements -->
-			<nav role="navigation">
-				 
-				<h1> Canvas Time </h1>
-				 
-				<a href="#pg1maincontent" class="sronly">skip to main content</a>
-				<ul>
-				 	<li> <a href="index.html"><i class="fa fa-home" aria-hidden='true'></i>Home</a> </li>
-				 	<li> <a href="canvas.html">canvas</a></li>
-					<li> <a href="itinerary.html">itinerary</a> </li>
-				</ul>
-			</nav>
-			<br class="clearfix">
-			 
-			<!-- both h1 and link of class .sronly, found within the nav are floated-->
-		</header>
-  <!--<div  >
-  	<canvas id="canvas1" width="300" height="300"></canvas>
-  	<button id="button1">click for circles</button>
-  	<button id="clear1">clear the canvas</button>
-  </div>
-  <div  >
-  	<canvas id="canvas2" width="300" height="300"></canvas>
-  	<button id="button2">click to animate rectangle</button>
-  </div>
-  <div  >
-  	<canvas id="canvas3" width="300" height="300"></canvas>
-  	<button id="button3">click to animate rectangle</button>
-  </div>
-  -->
-  <div>
-        <canvas width="400" height="300" id="canvas1"></canvas>
-        <button id="button1">Click for circles</button>
-        <button id="clear1">Clear the canvas</button>
-    </div>
-    <div>
-        <canvas width="400" height="300" id="canvas2"></canvas>
-        <button id="button2">Click to animate rectangle</button>
-    </div>
-    <div>
-        <canvas width="400" height="300" id="canvas3"></canvas>
-        <button id="button3">Click to show text</button>
-    </div>
-    <div id="meme">
-    	<label for="image">select an image:</label>
-    	<select id="image">
-    		<option checked>please select one:</option>
-    		<option value="kittenduck">kitten and duck</option>
-    		<option value="picard">cap picard</option>
-    		<option value="kid">kid</option>
-    		<option value="sealion">sea lion</option>
-    	</select>
-    	<br>
-    	<label for="line1">top line of text:</label>
-    	<input type="text" id="line1"> 
-    	<br>
-    	<label for="line2">bottom line of text:</label>
-    	<input type="text" id="line2">
-    	<br>
-    	
-    	
-    	<canvas id="memecanvas" width="400" height="300"></canvas>
-    	<button id="creatememe">create image</button>
-    </div>
+      <header>
+        <!-- for screenreaders that are not up-to-date and for the purposes of the course requirements -->
+        <nav role="navigation">
+            <h1> Canvas Time </h1>
+            <a href="#pg1maincontent" class="sronly">skip to main content</a>
+            <ul>
+                <li> <a href="index.html">
+                      <i class="fa fa-home" aria-hidden='true'>
+                        
+                      </i>Home
+                      </a> 
+                </li>
+                <li> <a href="canvas.html">
+                    canvas  </a>
+                  </li>
+                 <li> <a href="itinerary.html"> itinerary </a> </li>
+            </ul>
+        </nav>
+        <br class="clearfix">
+        <!-- both h1 and link of class .sronly, found within the nav are floated-->
+      </header>
+     
 
     <!-- start canvas game demo/animation section -->
-
     <div id="animwriter">
-    <select id="character">
-    <label for ="character">select a shape</label>
-    	<option checked value="default">please select</option>
-    	<option value="circle">circle</option>
-    	<option value="square">square</option>
-    	<option value="pie">pie slice</option>
-    </select>
-    <button id ="startfun">start!</button>
-    <button id="restart">restart!</button>
-    	<canvas id="anim" width="800" height="300"></canvas>
-    	<button id="up">up</button>
-    	<button id="down">down</button>
-    	<button id="left">left</button>
-    	<button id="right">right</button>
+      <label for ="character">select a shape</label>
+      <select id="character">
+          <option selected value="default">please select</option>
+        	<option value="circle">circle</option>
+        	<option value="square">square</option>
+        	<option value="pie">pie slice</option>
+      </select>
+          <button id ="startfun">start!</button>
+          <button id="restart">restart!</button>
+          
+          <canvas id="anim" width="800" height="300"></canvas>
+          
+          <button id="up">up</button>
+          <button id="down">down</button>
+          <button id="left">left</button>
+          <button id="right">right</button>
     </div>
-	<div>
-	<p id="fill"></p>
-	</div>
+	  <!-- display x and y position  and message window-->
+    <div>
+	    <p id="fill"></p>
+	 </div>
+	 
+  <!-- display email form-->
+    <div id="emailer">
+      	<form id="email">
+      	   <input type="text" placeholder="send an email">
+      	</form>
+	 </div>
 
 
 

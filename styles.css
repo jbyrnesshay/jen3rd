@@ -716,35 +716,4 @@ input[type=radio]:invalid {
 	color: white;
 }
 
-#canvasPage h1 {
-	float: none;
-	display: block;
-}
-canvas  {
-	border: 1px solid black;
-}
-
- #canvasPage div {
- 	width: 32%;
- 	margin-right: 1%;
- 	float: left;
- 	display: inline-block;
- }
- #canvasPage button {
- 	display: inline-block;
- 	 
- }
- #canvasPage div#meme {
- 	clear: both;
- 	margin-top: 1em;
-
-
- }
-#animwriter {
-	margin-top: 1em;
-}
-
-.disable {
-	visibility: hidden;
-}
 
