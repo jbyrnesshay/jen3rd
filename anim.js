@@ -20,6 +20,7 @@ $(document).ready(function(){
 			$('body').css("background", "white");
 		});
 		 
+		 $('#right').hide();
 	 
 		//keydown listenere to control character motion
 		//using body  because document causes problems with firefox
@@ -225,18 +226,33 @@ $(document).ready(function(){
 	//target for opening emailto form
 	function email () {
 		//is x, y position of character at target
-		if (posy <=225 && posy>=175 && posx >=725 && posx <=775) {
+		if ((posy <=225 && posy>=175) && (posx >=725 && posx <=775)) {
 			 		status = 'inside email';
-			 		$('#right').addClass("enable");
-			 		$('#emailer form').addClass("enable");
+			 		//$('#right').addClass("enable");
+			 		//$('#emailer form').addClass("enable");
+			 		showemail();
+			 		
 		}
 	    else {
-	    	$('#emailer').removeClass("enable");
-	    	$('#emailer').removeClass("enable");
+	    	//$('#emailer').removeClass("enable");
+	    	//$('#emailer').removeClass("enable");
+	    	$('#right').slideUp();
 	    	status = 'not inside email';
 		}
 		 
 	}//end email fucntion
 
+
+function showemail() {
+	//$('#right').show();
+	//$('#right').slideDown(1500).show();
+	 
+	
+	$('#right').show(600).animate({
+		 
+		right: "300", height: "300px"
+		},1000
+	);//endanimate
+	}
 });
  

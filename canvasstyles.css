@@ -35,12 +35,19 @@ width: 800px;
 }
 #right{
 	width: 400px;
-	float: left;
+	display: inline-block;
 	 
-	 margin-top: 8em;
-	 margin-right: 7em;
-	 margin-left:1em;
+	 margin-top: 5em;
+	  
+	 right:0;
 	border: 1px solid red;
+	position: absolute;
+	padding: 0 0 0 1.5em;
+	background: aqua;
+	color: white;
+	font-size: 1.5em;
+	font-style: bolder;
+
 }
 
 .enable {
