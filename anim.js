@@ -1,6 +1,11 @@
-$(document).ready(function() {
+$(document).ready(function(){
 		//sets animateable character figure variable
 		var figure = '';
+		var status = '';
+		var ty = '';
+		var posy='';
+		var posx='';
+		var test='';
 		//is the game start button clicked
 		$('#startfun').click(function(){
 		 	 figure = $('#character').val();
@@ -14,12 +19,17 @@ $(document).ready(function() {
 			$('#character').val('default');
 			$('body').css("background", "white");
 		});
-
-	
-	
+		 
+	 
 		//keydown listenere to control character motion
-		$(document).keydown(function(event) {
-			var keypress=event.which;
+		//using body  because document causes problems with firefox
+		$('body').keydown(function(e) {
+
+
+			//var keypress=event.which;
+			var keypress = e.which;
+			 
+		 
 			switch(keypress){
 			  	    
 				case 38:
@@ -59,7 +69,7 @@ $(document).ready(function() {
 				//$('#anim').stopLayer('myBox');
 						$('body').css(
 							"background", "white"
-						)
+						);
 					break;
 			 }//end switch
 
@@ -67,10 +77,10 @@ $(document).ready(function() {
 		 	var contents = posx + '&nbsp;&nbsp;&nbsp;' +posy +'&nbsp;&nbsp;&nbsp;' +status;
 		 	$('#fill').html(contents);
 		 	//instance of email form open function below depends on character position as controlled above
-		 	//email();
+		 	email();
 
-		 	//if character moves inside of 'change background ' box, background color is changed
-		 	if (posy <=25 && (posx >=500 && posx <=700)) {
+		 	//if character moves inside of change backgroundbox, background color is changed
+		 	if (posy <=25 && posx >=500 && posx <=700) {
 		 		setTimeout(function() {
 				 		$('body').css(
 		 		 		"background", "blue" 
@@ -131,7 +141,7 @@ $(document).ready(function() {
 					name: 'circle',
 					draggable: true
 				});
-				var ty = $('#anim').getLayer('circle');
+				ty = $('#anim').getLayer('circle');
 				//keep track of x and y in order to implement movement boundaries in keydown function below
 				posx= ty.x;
 				posy=ty.y;
@@ -148,7 +158,7 @@ $(document).ready(function() {
 					name: 'square',
 					draggable: true,
 				});
-				var ty = $('#anim').getLayer('square');
+				ty = $('#anim').getLayer('square');
 				posx= ty.x;
 				posy=ty.y;
 			break;
@@ -167,7 +177,7 @@ $(document).ready(function() {
 					draggable: true,
 					fromCenter: false
 				});
-				var ty = $('#anim').getLayer('pie');
+				ty = $('#anim').getLayer('pie');
 				//make adjustments in perceived x, y location for pieslice due to asymmetry
 				posx= ty.x +75;
 				posy=ty.y +25;
@@ -175,10 +185,11 @@ $(document).ready(function() {
 			default:
 				alert('you did not select');
 				break;
-		}//end switch figure*/
+		}//end switch figure
 	}//end placeCharacter
 
 	//draw non-character graphics on canvas
+	
 	function placeSetting() {
 		 	$('#anim').drawRect({
 				strokeStyle: '#909',
@@ -212,20 +223,20 @@ $(document).ready(function() {
 
 
 	//target for opening emailto form
-	function email() {
+	function email () {
 		//is x, y position of character at target
 		if (posy <=225 && posy>=175 && posx >=725 && posx <=775) {
 			 		status = 'inside email';
-			 		$('#emailer').addClass('enable');
+			 		$('#right').addClass("enable");
+			 		$('#emailer form').addClass("enable");
 		}
 	    else {
-	    	$('#emailer').removeClass('enable');
+	    	$('#emailer').removeClass("enable");
+	    	$('#emailer').removeClass("enable");
 	    	status = 'not inside email';
 		}
 		 
-	}//end email function */
+	}//end email fucntion
 
-
- 
- });
+});
  

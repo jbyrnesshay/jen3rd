@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+	jQuery.noConflict();
 	$('#button1').click( function() {
 	$('#canvas1').drawRect({
 		fillStyle: 'red',

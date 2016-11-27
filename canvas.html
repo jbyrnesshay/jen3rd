@@ -2,14 +2,15 @@
 <html>
   <head>
     <title>canvas</title>
-    <link href="styles.css" rel="stylesheet" type="text/css">
+     
     <link href="canvasstyles.css" rel="stylesheet" type="text/css">
     <meta charset="utf-8">
   </head>
   <body id="canvasPage">
-      <header>
+  <!--
+      <header>   -->
         <!-- for screenreaders that are not up-to-date and for the purposes of the course requirements -->
-        <nav role="navigation">
+      <!--  <nav role="navigation">
             <h1> Canvas Time </h1>
             <a href="#pg1maincontent" class="sronly">skip to main content</a>
             <ul>
@@ -23,11 +24,13 @@
                     canvas  </a>
                   </li>
                  <li> <a href="itinerary.html"> itinerary </a> </li>
+                 <li> <a href="test.html">test</a></li>
             </ul>
         </nav>
         <br class="clearfix">
         <!-- both h1 and link of class .sronly, found within the nav are floated-->
-      </header>
+      <!--</header>-->
+
      
 
     <!-- start canvas game demo/animation section -->
@@ -44,19 +47,18 @@
           
           <canvas id="anim" width="800" height="300"></canvas>
           
-          <button id="up">up</button>
-          <button id="down">down</button>
-          <button id="left">left</button>
-          <button id="right">right</button>
+         
     </div>
 	  <!-- display x and y position  and message window-->
     <div>
 	    <p id="fill"></p>
 	 </div>
 	 
-  <!-- display email form-->
-    <div id="emailer">
+ 
+    <div id="right">
+      <p>test this</p>
       	<form id="email">
+            <input type="radio" value="test">test
       	   <input type="text" placeholder="send an email">
       	</form>
 	 </div>
@@ -67,9 +69,9 @@
  		 src="https://code.jquery.com/jquery-3.1.1.min.js"
  		 integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   			crossorigin="anonymous"></script>
-  			<script src="https://cdnjs.cloudflare.com/ajax/libs/jcanvas/16.7.3/jcanvas.min.js"></script>
-  			<script src="canvas.js"></script>
-  			<script src="meme.js"></script>
+  			<script src="https://cdnjs.cloudflare.com/ajax/libs/jcanvas/16.7.3/jcanvas.js"></script>
+  			 
+  			 
   			<script src="anim.js"></script>
   </body>
 </html>
