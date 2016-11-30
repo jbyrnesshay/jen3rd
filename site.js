@@ -10,6 +10,8 @@ $(document).ready(function() {
 	fadeinWelcome();
 	maketableLarge();
 	rangesliderDisplay();
+	selectaTopic();
+
 	
 			 
 	$("#jokhang").mouseenter(function() {
@@ -164,7 +166,13 @@ $(document).ready(function() {
 /**
 **completed functions
 **/
- 	
+ 	function selectaTopic() {
+		$('#tripvibe').change(function(){
+		var value = $(this).val();
+		var div = '#'+value;
+		var content = $(div).html();
+		$('#display').html(content);});
+	}
 
 	//display range slider value with realtime changes
 	function rangesliderDisplay() {

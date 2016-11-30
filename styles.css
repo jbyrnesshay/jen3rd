@@ -270,6 +270,11 @@ body {
 
 	  
 }
+
+#pg1maincontent #centercol section {
+	visibility: hidden;
+}
+
 /* overall site 3-column layout styling, some of which is overridden where needed by styling blocks for page 2 below*/
 #leftcol {
 	margin-top: 6.6em;
