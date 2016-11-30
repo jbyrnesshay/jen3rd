@@ -8,16 +8,39 @@ $(document).ready(function() {
 	});
 	//end display range slider value with realtime changes
 
-	//animate nav links section
-	$("#heading").click(function() {
-			$("h1").toggleClass("change");
-			$("nav ul, nav a, nav li, nav").css("z-index", "4");
-			$("#pg1maincontent").animate({
-				height: "-=860",
-			}, 1600, function() {
-				$("#pg1maincontent").animate({
-					height: "+=860",
-				}, 4000)
+	//animate nav links 
+
+	 $("#viewtable").click(function() {
+		 
+		
+		//$("body").css({ "visibility": "hidden", "background":"black"});
+		$('#tableblock').toggleClass('fullTable');
+		$('body').toggleClass('tableBackground');
+		//$('image').toggleClass('tableimage');
+		//$('#tableblock').css({"visibility": "visible","position": "absolute", "z-index": "10", "top": "7em", "height": "50%"});
+		
+		
+			if(!($("#tableblock img").length)) {
+		$('#tableblock').append("<img src='images/yak.png'></img>").
+		$("#viewtable").html('click to return');
+		}
+	else {$('#tableblock img').remove();
+	 
+	$("#viewtable").html('click to view fullpage table');
+}
+	}
+			);
+		
+		
+			/*$("#heading").click(function() {
+					$("h1").toggleClass("change");
+					$("nav ul, nav a, nav li, nav").css("z-index", "4");
+					$("#pg1maincontent").animate({
+						height: "-=860",
+					}, 1600, function() {
+						$("#pg1maincontent").animate({
+							height: "+=860",
+					"	}, 4000)
 			});
 			$("nav a").css({
 				background:  "red",
@@ -54,7 +77,7 @@ $(document).ready(function() {
 				)
 			});
 	});//end animate nav links
-	
+	*/
 	$("#jokhang").mouseenter(function() {
 		 	
 		  $("#jokhang").fadeOut(1000).fadeIn(500);

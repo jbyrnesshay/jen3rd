@@ -22,7 +22,7 @@
 				</ul>
 			</nav>
 			<br class="clearfix">
-			<button type="button" id="heading"> click here to change </button>
+			
 			<!-- both h1 and link of class .sronly, found within the nav are floated-->
 		</header>
 		<!-- main on each page of the site have been given ids to help make targeted selectors as necessary for each page--> 
@@ -46,6 +46,7 @@
  					<!-- the following div tableblock is only for styling table together with accompanying footer -->
 					<!-- table is part of the leftcolumn page 1 article content -->
 					<div id="tableblock">
+					<button type="button" id="viewtable"> click to view fullpage table </button>
 					<table>
 		 				<caption> my lhasa trip geography in context </caption>
 						<tr>						
@@ -106,30 +107,67 @@
 				<h2> sidebar</h2>
  				<aside>
 
-					<form id="userinfo" novalidate> 
-					<label for="name">Your name:</label>
-					 <input type="text" placeholder="ENTER FIRST NAME" id="name" name="name"></input> 
-					 <div id="nameerror"><br></div>
-					 <label for = "title" id="titlelab">add adjective? yes
-					 <input type="checkbox" name="title" id="title" value="yes"></input><br>
-			          </label>
-					 <input type="radio" value="male" name="gender">male</input><br>
-					 <input type="radio" value="female" name="gender">female</input><br>
-					 <input type="radio" value="other" name="gender">other</input></br>
-					 <div id="gendererror"><br></div>
+					<form id="userinfo" novalidate action="" method=""> 
+
+					<fieldset>
+					<legend>legend=who are you</legend>
+					 
+
+						<!-- add labels, instead of naked text descript -->
+						<label for ="name">your name</label>
+						 <input type="text" placeholder="ENTER FIRST NAME" id="name" name="name" aria-required="true" autofocus></input> 
+						 <div id="nameerror"><br></div>
+						 <label for = "title" id="titlelab" aria-required="false">add adjective? yes </label>
+						 <input type="checkbox" name="title" id="title" value="yes"></input><br>
+						<p id="question">what type of guy are you</p>
+						<label>
+						 <input type="radio" value="decline" name="gender" checked aria-labelledby="question" role="radiogroup" aria-checked="true">decline<br>
+						 </label>
+				         <label>
+						 <input type="radio" value="male" name="gender" checked aria-labelledby="question" role="radiogroup" aria-checked="false">male<br>
+						 </label>
+						 <label>
+						 <label>
+						 <input type="radio" value="female" name="gender" checked aria-labelledby="question" role="radiogroup" aria-checked="false">female<br>
+						 </label><label>
+
+						 <input type="radio" value="other" name="gender" checked aria-labelledby="question" role="radiogroup" aria-checked="false">other</br>
+						 </label>
+						 <div id="gendererror"><br></div>
+						 <label for = "phone">phone number </label>
+						 	<input type="tel" id="phone" aria-required="false">
+						 <label for="email">email</label>
+						 	<input type="email" id="email" aria-required="false">
+						 	<label for ="count">how many pies you like (2-5)</label>
+						 <input type ="number" id='count' min='2' max ='5'>
+					 </fieldset>
+
+
 					 <div id = "rangestyle">
 
 					 <label for = "range">How many days do you want to go?</label>
 					 <div id="rangefill">3&nbsp;</div>
-					<input type="range" id = "range" min='0' max='10' value="3" name="rangeval"></input><br>
+					<input type="range" id = "range" min='0' max='10' value="3" name="rangeval"><br>
 					</div>
 					<br>
 					<div id="timemessage"><p>a good time to go</p></div><br>
 					<label for="when" id="goodtime">when to go?</label>
 
-					<input type="date" id="when" name="when"></input>
+					<input type="date" id="when" name="when">
 					<div id="dateerror"><br></div>
-					<input type="color" id="color" name="color"></input>
+					<input type="color" id="color" name="color">
+
+					<select id="filling">
+						<option selected>select one</option>
+						<option value="apple">apple</option>
+						<option value="blueberry">blueberry</option>
+						<option value="cherry">cherry</option>
+					</select>
+					<div class="msg"></div>
+					<label for ="comments">Special requests: </label>
+						<textarea id="comments" placeholder="any additional instructions for me"></textarea>
+
+
 					<input type="submit" value="Submit">
 
 					</form>
@@ -180,5 +218,17 @@
  		 integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   			crossorigin="anonymous"></script>
   			<script src="site.js"></script>
+  			<script>
+					  $('#filling').change(function() {
+					  	if($('#filling').val() == 'apple'){
+					  		$('.msg').text('you selected apple');
+					  	}
+					  });					  
+			</script>
+			<style>
+					  .msg {
+					  	margin-bottom: 3em;
+					  }
+			</style>
 	</body>
 </html>

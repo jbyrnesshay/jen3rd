@@ -30,7 +30,7 @@ body {
 	/*min-width for my own taste, to stop breaking on resize*/
 	min-width: 40em;
 	/*background: #fdfdfb;;*/
-	background: #FBF9F9;
+	background: white;
 	color: black;
 	/*baseline*/
 	position: relative;
@@ -98,8 +98,8 @@ a.sronly:focus {
 /* site h1 is inside the header */
 h1 {
 	color:brown;
-	background: #f8e2d3;
-	background: #f2e3d9;
+	 
+	background: lightgrey;
 	padding: .3em .5em .3em .5em;
  	width: 30%;
 	min-width: 200px;
@@ -142,8 +142,8 @@ nav ul li{
 nav a {
     text-decoration: none;
 	background: white;
-	background:  #f2e3d9;
-	background: #fae1d1;
+	 
+	background: lightgrey;
 	border: solid 1px white;
 	border-radius: 150px;
 	padding: 5px;
@@ -222,6 +222,7 @@ h2 {
 	background: -moz-linear-gradient(top, rgba(249,221,169,1) 0%, rgba(255,251,245,1) 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(top, rgba(249,221,169,1) 0%,rgba(255,251,245,1) 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to bottom, rgba(249,221,169,1) 0%,rgba(255,251,245,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background: lightgrey;
 	border-radius: 10px;
 }
 h4 {
@@ -229,7 +230,7 @@ h4 {
 	color: purple;
 }
 h3 {
- background: #fae1d1;
+ background: lightgrey;
 } 
 /* end headings styling */
 
@@ -380,7 +381,7 @@ a[href*="jigsaw"]:hover, a[href*="nu"]:hover {
 /* page 1 right column */
 
 #rightcol aside {
-    background: #fae1d1;
+    background: lightgrey;
 	border: 1px solid black;
 	border-radius: 10px;
 	width: 80%;
@@ -472,6 +473,7 @@ figcaption p {
 
 /* id tableblock allows combining table with its footer for styling as a group*/
 #tableblock {
+
 	background: #a2f7eb;
 	margin: 0 auto;
 	width: 96%;
@@ -479,6 +481,27 @@ figcaption p {
 	border: 1px solid black;
 	margin-top: 3em;
 	border-radius: 10px;
+}
+#tableblock img {
+
+	padding-top: 2em;
+	position: relative; 
+	display: block;
+	margin: 0 auto;
+	width: 60%;
+	height:50%;
+}
+.tableBackground {
+	visibility: hidden;
+	 background: black;
+}
+.fullTable {
+	width: 90%;
+	visibility: visible;
+	position: absolute;
+	z-index: 10;
+	top: -2em;
+	 
 }
  table {
 	/*fixed allows some resizing without breaking*/
