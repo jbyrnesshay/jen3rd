@@ -23,6 +23,7 @@ body {
     font-size: 100%;
     margin: 0;
     padding: 0;
+    top: 0;
     font-family: Arial, Helvetica, sans-serif;
     /*allow room for footer with margin-bottom*/
 	margin-bottom: 40px;
@@ -35,6 +36,7 @@ body {
 	/*baseline*/
 	position: relative;
 	width:  100%;
+
 }
 
 /* general hover state link styling for site */
@@ -235,7 +237,35 @@ h3 {
 } 
 /* end headings styling */
 
-
+body {
+	 
+}
+.off {
+	display:none;
+}
+#container.off {
+	 display:none;
+	   
+}
+#container.on {
+	display:block;
+}
+#container {
+	display:none;
+}
+ 
+#welcome {
+	font-size: 5em;
+	position: relative;
+	text-transform: uppercase;
+	display: inline-block;
+	text-align: center;
+	margin: 0 auto;
+	width: 90%;
+	top: 4em;
+	font-family: "Century Gothic", sans-serif;
+	  
+}
 /* overall site 3-column layout styling, some of which is overridden where needed by styling blocks for page 2 below*/
 #leftcol {
 	margin-top: 6.6em;
@@ -482,6 +512,7 @@ figcaption p {
 	border: 1px solid black;
 	margin-top: 1.5em;
 	border-radius: 10px;
+	position: relative;
 }
 #tableblock img {
 
@@ -515,6 +546,8 @@ div#tableblock.fullTable {
 }
 #tableblock button {
 	width: initial;
+	height: inherit;
+	position: relative;
 	margin-top: .5em;
 	display: inline-block;
 	text-transform: uppercase;

@@ -1,94 +1,37 @@
 $(document).ready(function() {
+	//$('#container').show();
+	
+	fadeinWelcome();
+	
 
+	//$('body').fadeIn(3000);
 	 
-	//display range slider value with realtime changes
-	$('#range').on("input", function(){
-			var testit = $('#range').val();
-			$('#rangefill').html(testit);
-	});
-	//end display range slider value with realtime changes
+	//$('#container'y", "block");
+	
+	//$('#welcome').fadeIn(1000, function(){$(this).fadeOut(1600, function(){
+	//	$('body').replaceWith(bodycontents);})});
 
-	//animate nav links 
+	 /*$('#welcome').fadeIn(1000, function(){
+		$('body').replaceWith(bodycontents);});
+		$(div:hidden).show();
 
-	 $("#viewtable").click(function() {
+	 */
+
+
+
+		//$('body').fadeIn(1000);
 		 
-		$('#position').css("position", "absolute");
-		//$("body").css({ "visibility": "hidden", "background":"black"});
-		
-
-		$('body').toggleClass('tableBackground');
-		$('#tableblock').toggleClass('fullTable');
-		$('#tableblock button').animate({width: '+=40%', fontSize:'+=40%'}, 1000, 
-				//callback
-				function(){$(this).animate({width:'-=40%',fontSize:'-=40%'}, 1000, function(){$(this).stop();
-			}
-		);});
-
-		
-
-		//$('image').toggleClass('tableimage');
-		//$('#tableblock').css({"visibility": "visible","position": "absolute", "z-index": "10", "top": "7em", "height": "50%"});
-		
-		
-			if(!($("#tableblock img").length)) {
-		$('#tableblock').append("<img src='images/yak.png'></img>");
-		$("#tableblock #viewtable").html('click to return');
-		}
-	else {$('#tableblock img').remove();
-	$('#position').css("position", "initial");
-	 
-	$("#tableblock #viewtable").html('click to view fullpage table');
-}
-	}
-			);
-		
-		
-			/*$("#heading").click(function() {
-					$("h1").toggleClass("change");
-					$("nav ul, nav a, nav li, nav").css("z-index", "4");
-					$("#pg1maincontent").animate({
-						height: "-=860",
-					}, 1600, function() {
-						$("#pg1maincontent").animate({
-							height: "+=860",
-					"	}, 4000)
-			});
-			$("nav a").css({
-				background:  "red",
-				color: "white",
-				border: "red"
-
-			});
-			$("ul").animate({
-				 
-				left: "-=750",
-				top: "-=50"
-
-			}, 1500, 'swing')
-			$("ul").animate({
-				top:"+=250"
-			})
-			$("ul").animate({
-				left: "+=750",
-				top: "-=200"
-			}, 1500)
-			$("ul").animate({
-				fontSize: "+=3em"
-				
-			}, 2000, function () {
-				$("ul").animate({
-					fontSize: "-=3em"
-				}, function() {
-					$("nav a").css({
-				
-				color: "midnightblue",
-				background: "#fae1d1",
-				border: "solid 1px white"
-			});}
-				)
-			});
-	});//end animate nav links
-	*/
+	
+	//$('#welcome').animate({width: "500%"});
+	//$('#pg1maincontent').fadeIn(3000);
+	//listener for table button click and code to enlargen table on click
+	maketableLarge();
+	//listener and implementation of range slider values display while changing
+	rangesliderDisplay();
+	
+	
+	
+			 
 	$("#jokhang").mouseenter(function() {
 		 	
 		  $("#jokhang").fadeOut(1000).fadeIn(500);
@@ -235,6 +178,64 @@ $(document).ready(function() {
    		});
 	 
 
+
 });//end doc ready
 
- 
+/**
+**completed functions
+**/
+ 	function maketableLarge(){
+		 //get width of button in table for restoring original width after function and return to homepage view
+		var test = $('#tableblock button').css('width');
+		$("#viewtable").click(function() {
+			$('#position').css("position", "absolute");
+			$('body').toggleClass('tableBackground');
+			$('#tableblock').toggleClass('fullTable');
+		
+			if ($('#tableblock').hasClass('fullTable')) {
+				$('#tableblock button').animate({width: '+=40%', fontSize:'+=40%'}, 1000, 
+						//callback
+						function(){$(this).animate({width:'-=40%',fontSize:'-=40%'}, 1000)}
+						);
+				}
+			else {
+				$('#tableblock button').finish().animate();
+				$('#tableblock button').css("width", test);
+			}
+			if (!($("#tableblock img").length)) {
+				$('#tableblock').append("<img src='images/yak.png'></img>");
+				$("#tableblock #viewtable").html('click to return');
+			}
+			else {
+				$('#tableblock img').remove();
+				$('#position').css("position", "initial");
+				$("#tableblock #viewtable").html('click to view fullpage table');
+			}//end if/else
+		});//end click
+	}//end maketableLarge
+
+	//display range slider value with realtime changes
+	function rangesliderDisplay() {
+		$('#range').on("input", function(){
+			var testit = $('#range').val();
+			$('#rangefill').html(testit);
+		});
+	}
+
+	function fadeinWelcome() {
+		$('body').hide();
+		var bodycontents = $('body').html();
+	 	var welcome = '<div id="welcome">welcome</div>';
+		$('body').html(welcome);
+		$('body').fadeIn(3000).fadeOut(3000, function() {
+		getit();
+								//$(this).html(bodycontents);
+							});
+	//$('#container').show();
+	 
+	 function getit() {
+	 	$('body').html(bodycontents);
+	 	 $('body').show();
+	 	$('#container').fadeIn(1500);
+	 }
+	 }
