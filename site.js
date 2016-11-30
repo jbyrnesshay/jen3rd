@@ -1,35 +1,15 @@
 $(document).ready(function() {
 	//$('#container').show();
 	
-	fadeinWelcome();
+	
 	
 
-	//$('body').fadeIn(3000);
-	 
-	//$('#container'y", "block");
+ 
 	
-	//$('#welcome').fadeIn(1000, function(){$(this).fadeOut(1600, function(){
-	//	$('body').replaceWith(bodycontents);})});
-
-	 /*$('#welcome').fadeIn(1000, function(){
-		$('body').replaceWith(bodycontents);});
-		$(div:hidden).show();
-
-	 */
-
-
-
-		//$('body').fadeIn(1000);
-		 
-	
-	//$('#welcome').animate({width: "500%"});
-	//$('#pg1maincontent').fadeIn(3000);
-	//listener for table button click and code to enlargen table on click
-	maketableLarge();
 	//listener and implementation of range slider values display while changing
+	fadeinWelcome();
+	maketableLarge();
 	rangesliderDisplay();
-	
-	
 	
 			 
 	$("#jokhang").mouseenter(function() {
@@ -184,24 +164,44 @@ $(document).ready(function() {
 /**
 **completed functions
 **/
- 	function maketableLarge(){
-		 //get width of button in table for restoring original width after function and return to homepage view
-		var test = $('#tableblock button').css('width');
+ 	
+
+	//display range slider value with realtime changes
+	function rangesliderDisplay() {
+		$('#range').on("input", function(){
+			var testit = $('#range').val();
+			$('#rangefill').html(testit);
+		});
+	}
+
+ 
+	function fadeinWelcome() {
+		 var hide = $('#container').html();
+		 //$('#pg1maincontent').hide().delay(2000, function(){$('#container').html(hide);});
+		$('#container').hide(function(){
+			$('#welcome').fadeIn(1000).fadeOut(1000, function() {
+				$('#container').fadeIn(1000);
+			});
+		});
+		 
+		 //$('#container').addClass('welcome').fadeIn(1000);
+		 
+		 //.fadeIn(2500);
+		 
+
+
+
+		//$('body').fadeIn(3000);
+	}
+
+	function maketableLarge(){
+		 
 		$("#viewtable").click(function() {
 			$('#position').css("position", "absolute");
 			$('body').toggleClass('tableBackground');
 			$('#tableblock').toggleClass('fullTable');
 		
-			if ($('#tableblock').hasClass('fullTable')) {
-				$('#tableblock button').animate({width: '+=40%', fontSize:'+=40%'}, 1000, 
-						//callback
-						function(){$(this).animate({width:'-=40%',fontSize:'-=40%'}, 1000)}
-						);
-				}
-			else {
-				$('#tableblock button').finish().animate();
-				$('#tableblock button').css("width", test);
-			}
+			 
 			if (!($("#tableblock img").length)) {
 				$('#tableblock').append("<img src='images/yak.png'></img>");
 				$("#tableblock #viewtable").html('click to return');
@@ -213,29 +213,3 @@ $(document).ready(function() {
 			}//end if/else
 		});//end click
 	}//end maketableLarge
-
-	//display range slider value with realtime changes
-	function rangesliderDisplay() {
-		$('#range').on("input", function(){
-			var testit = $('#range').val();
-			$('#rangefill').html(testit);
-		});
-	}
-
-	function fadeinWelcome() {
-		$('body').hide();
-		var bodycontents = $('body').html();
-	 	var welcome = '<div id="welcome">welcome</div>';
-		$('body').html(welcome);
-		$('body').fadeIn(3000).fadeOut(3000, function() {
-		getit();
-								//$(this).html(bodycontents);
-							});
-	//$('#container').show();
-	 
-	 function getit() {
-	 	$('body').html(bodycontents);
-	 	 $('body').show();
-	 	$('#container').fadeIn(1500);
-	 }
-	 }

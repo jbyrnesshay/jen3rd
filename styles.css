@@ -37,6 +37,8 @@ body {
 	position: relative;
 	width:  100%;
 
+	 
+
 }
 
 /* general hover state link styling for site */
@@ -251,7 +253,7 @@ body {
 	display:block;
 }
 #container {
-	display:none;
+	 display:none;
 }
  
 #welcome {
@@ -264,6 +266,8 @@ body {
 	width: 90%;
 	top: 4em;
 	font-family: "Century Gothic", sans-serif;
+	display:none;
+
 	  
 }
 /* overall site 3-column layout styling, some of which is overridden where needed by styling blocks for page 2 below*/
