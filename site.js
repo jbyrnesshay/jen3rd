@@ -12,21 +12,24 @@ $(document).ready(function() {
 
 	 $("#viewtable").click(function() {
 		 
-		
+		$('#position').css("position", "absolute");
 		//$("body").css({ "visibility": "hidden", "background":"black"});
 		$('#tableblock').toggleClass('fullTable');
 		$('body').toggleClass('tableBackground');
+		
+
 		//$('image').toggleClass('tableimage');
 		//$('#tableblock').css({"visibility": "visible","position": "absolute", "z-index": "10", "top": "7em", "height": "50%"});
 		
 		
 			if(!($("#tableblock img").length)) {
-		$('#tableblock').append("<img src='images/yak.png'></img>").
-		$("#viewtable").html('click to return');
+		$('#tableblock').append("<img src='images/yak.png'></img>");
+		$("#tableblock #viewtable").html('click to return');
 		}
 	else {$('#tableblock img').remove();
+	$('#position').css("position", "initial");
 	 
-	$("#viewtable").html('click to view fullpage table');
+	$("#tableblock #viewtable").html('click to view fullpage table');
 }
 	}
 			);

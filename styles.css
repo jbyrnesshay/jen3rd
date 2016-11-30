@@ -495,13 +495,22 @@ figcaption p {
 	visibility: hidden;
 	 background: black;
 }
-.fullTable {
-	width: 90%;
+div#tableblock.fullTable {
+	
 	visibility: visible;
-	position: absolute;
+	 display: block;
+	position: relative;
 	z-index: 10;
-	top: -2em;
+	top: 2em;
+	width: 70%;
+	margin: 0 auto;
 	 
+}
+/* allows to position .fullTable */
+#position{
+	width: 94%;
+	text-align: center;
+	top: 0;
 }
  table {
 	/*fixed allows some resizing without breaking*/
