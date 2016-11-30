@@ -14,8 +14,16 @@ $(document).ready(function() {
 		 
 		$('#position').css("position", "absolute");
 		//$("body").css({ "visibility": "hidden", "background":"black"});
-		$('#tableblock').toggleClass('fullTable');
+		
+
 		$('body').toggleClass('tableBackground');
+		$('#tableblock').toggleClass('fullTable');
+		$('#tableblock button').animate({width: '+=40%', fontSize:'+=40%'}, 1000, 
+				//callback
+				function(){$(this).animate({width:'-=40%',fontSize:'-=40%'}, 1000, function(){$(this).stop();
+			}
+		);});
+
 		
 
 		//$('image').toggleClass('tableimage');

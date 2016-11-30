@@ -91,6 +91,7 @@ a.sronly:focus {
 	width: 200px;
 	text-transform: uppercase;
 	overflow: initial;
+	border: none;
 }
 /* end skiplink styling */
 
@@ -479,7 +480,7 @@ figcaption p {
 	width: 96%;
 	padding-bottom: 1.5em;
 	border: 1px solid black;
-	margin-top: 3em;
+	margin-top: 1.5em;
 	border-radius: 10px;
 }
 #tableblock img {
@@ -511,6 +512,18 @@ div#tableblock.fullTable {
 	width: 94%;
 	text-align: center;
 	top: 0;
+}
+#tableblock button {
+	width: initial;
+	margin-top: .5em;
+	display: inline-block;
+	text-transform: uppercase;
+	font-weight: bolder;
+	font-size: 1.4em;
+	border: 2px solid black
+	border-radius:10px;
+	
+
 }
  table {
 	/*fixed allows some resizing without breaking*/
