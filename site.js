@@ -11,7 +11,7 @@ $(document).ready(function() {
 	maketableLarge();
 	rangesliderDisplay();
 	selectaTopic();
-
+	
 	
 			 
 	$("#jokhang").mouseenter(function() {
@@ -172,7 +172,18 @@ $(document).ready(function() {
 		var div = '#'+value;
 		var content = $(div).html();
 		$('#display').html(content);});
+		waiting();
+		
 	}
+	function waiting() {
+		$("#display").hover(function(){
+    $("#display").css("background-color", "aqua");
+}, function() {
+	$(this).css("background-color", "white");
+});
+	}
+
+
 
 	//display range slider value with realtime changes
 	function rangesliderDisplay() {

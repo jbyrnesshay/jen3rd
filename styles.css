@@ -214,7 +214,7 @@ article {
 
 /* googlefont webfont used for h1, h2, h3 sitewide */
 h1, h2, h3 {
-	font-family: 'Allerta';
+	font-family: 'arial';
 	text-transform: uppercase;
 	text-align: center;
 }
@@ -272,7 +272,10 @@ body {
 }
 
 #pg1maincontent #centercol section {
-	visibility: hidden;
+	display:none;
+}
+#display {
+	width: 80%;
 }
 
 /* overall site 3-column layout styling, some of which is overridden where needed by styling blocks for page 2 below*/
