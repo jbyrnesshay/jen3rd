@@ -352,7 +352,7 @@ img#tripimage {
 #display {
 	width: 100%;
 	
-	
+	 
 	text-align: center;
 	margin: .5em auto 0 auto;
 	height: 15.5em;
@@ -363,6 +363,8 @@ img#tripimage {
 #display p {
 	margin-top: .25em;
 	background: aqua;
+	position: absolute;
+	height: 13em;
 }
  
 /* overall site 3-column layout styling, some of which is overridden where needed by styling blocks for page 2 below*/
