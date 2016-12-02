@@ -237,11 +237,15 @@ function tripimagelistener(){
 		$(this).css({"height": "150%", "width": "150%", "position":"relative", "right":"+=10em", "top":"-10em" });
 		$('.bgcontainer').css("overflow", "initial");
 		}, function(){$('#tripimage').css({"top":"+10em", "height":"100%", "width":"100%", "right":"-10em"});});
-*/		var pos = $('#tripimage').css("left");
-		$('#tripimage').mouseenter(function(){$(this).stop().animate({"width": "150%", "left":"-=8em"});
+*/		var left = $('#tripimage').css("left");
+		var height = $('#tripimage').css("height");
+		var top = $('#tripimage').css("top");
+		$('#tripimage').mouseenter(function(){$(this).stop().animate({"width": "150%", "height":"40%","left":"-=8em", "top":"-=8em"});
 			$('.bgcontainer').css("overflow", "initial")})
-		.mouseleave( function(){$(this).stop().animate({"width": "100%", "left":pos});
-			$('.bgcontainer').css("overflow", "hidden");});
+		.mouseleave( function(){$(this).stop().animate({"width": "100%", "height": height,"left":left, "top":top}, function(){
+			$('.bgcontainer').css("overflow", "hidden");})
+		});
+			
 	
 
 	}
