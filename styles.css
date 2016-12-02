@@ -392,14 +392,7 @@ img#tripimage {
     overflow:hidden; 
     height: 100%;
 }
-.bgcontainer:before{
-    z-index:-1;
-    position:absolute;
-    left:0;
-    top:0;
-    content: url("images/center.jpg");
-    opacity:0.4;
-}
+
 #rightcol {
 	/*float: right;*/
 	float: right;
