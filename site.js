@@ -240,7 +240,7 @@ function tripimagelistener(){
 */		var left = $('#tripimage').css("left");
 		var height = $('#tripimage').css("height");
 		var top = $('#tripimage').css("top");
-		$('#tripimage').mouseenter(function(){$(this).stop().animate({"width": "150%", "height":"40%","left":"-=8em", "top":"-=15em"});
+		$('#tripimage').mouseenter(function(){$(this).stop().animate({"width": "160%", "height":"70%","left":"-=9.5em", "top":"-=15em"});
 			$('.bgcontainer').css("overflow", "initial");
 			$('#centercol article').css("visibility", "hidden");
 		 
