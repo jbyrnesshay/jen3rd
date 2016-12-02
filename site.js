@@ -178,7 +178,7 @@ $(document).ready(function() {
 		var content = $(div).html();
 		var limage='';
 
-		waiting();
+		//waiting();
 		//alert(value);
 		switch(value) {
 			case 'weather':
@@ -240,10 +240,15 @@ function tripimagelistener(){
 */		var left = $('#tripimage').css("left");
 		var height = $('#tripimage').css("height");
 		var top = $('#tripimage').css("top");
-		$('#tripimage').mouseenter(function(){$(this).stop().animate({"width": "150%", "height":"40%","left":"-=8em", "top":"-=8em"});
-			$('.bgcontainer').css("overflow", "initial")})
+		$('#tripimage').mouseenter(function(){$(this).stop().animate({"width": "150%", "height":"40%","left":"-=8em", "top":"-=15em"});
+			$('.bgcontainer').css("overflow", "initial");
+			$('#centercol article').css("visibility", "hidden");
+		 
+
+			$('#tripimage').css("visibility", "visible")})
 		.mouseleave( function(){$(this).stop().animate({"width": "100%", "height": height,"left":left, "top":top}, function(){
-			$('.bgcontainer').css("overflow", "hidden");})
+			$('.bgcontainer').css("overflow", "hidden");
+			$('#centercol article').css("visibility", "visible")})
 		});
 			
 	
