@@ -3,11 +3,15 @@ $(document).ready(function() {
 	
 	
 	
+		
 
  
 	
 	//listener and implementation of range slider values display while changing
+	 
 	fadeinWelcome();
+	 
+
 	maketableLarge();
 	rangesliderDisplay();
 	selectaTopic();
@@ -173,34 +177,45 @@ $(document).ready(function() {
 		var div = '#'+value;
 		var content = $(div).html();
 		var limage='';
-		
-		
+
 		waiting();
 		//alert(value);
 		switch(value) {
 			case 'weather':
-			  limage = "images/weather.jpg";
+			  limage = "images/weather2.jpg";
 			  alt = "january day in Lhasa"
 			break;
 			case 'food':
-			  limage = "images/momos.jpg";
+			  limage = "images/momos2.jpg";
 			  alt = "plate of momos";
 			break;
 			case 'people':
-			  limage = "images/people.jpg";
+			  limage = "images/people2.jpg";
 			  alt = "lhasa locals in Bharkor Squqre";
 			break;
 			case 'sights':
-			  limage = "images/sights.jpg";
+			  limage = "images/sights2.jpg";
 			  alt = "lhasa sights";
 			break;
+			default:
+			  limage = '';
+			  content = '';
 			//default: 
 			//break;*/
 		}
-		 
+		 //src='"+limage+"'
+
 		
-		content = content + "<img id ='trip_image' src='"+limage+"'>";
-		$('#display').html(content);
+		 
+		if (limage && content){
+		$('#display').html(content).show();
+		$('#display').append('<img id="tripimage" src='+limage+'>');
+		}
+		else {
+			$('#display').html('').hide();
+			$('#display:image').remove();
+		}	
+		tripimagelistener();
 		//alert(limage);
 		//$('#lhasa_image').attr("src", "limage")
 		//$("#display").append("<img src='limage'/>");
@@ -211,13 +226,25 @@ $(document).ready(function() {
 
 	function waiting() {
 		$("#display").hover(function(){
-    $("#display").css("background-color", "aqua");
+    $("#display").css("background-color", "Lightyellow");
 }, function() {
-	$(this).css("background-color", "white");
+	$(this).css("background-color", "aqua");
 });
 	}
 
+function tripimagelistener(){
+	/*$('#tripimage').hover(function() {
+		$(this).css({"height": "150%", "width": "150%", "position":"relative", "right":"+=10em", "top":"-10em" });
+		$('.bgcontainer').css("overflow", "initial");
+		}, function(){$('#tripimage').css({"top":"+10em", "height":"100%", "width":"100%", "right":"-10em"});});
+*/		var pos = $('#tripimage').css("left");
+		$('#tripimage').mouseenter(function(){$(this).stop().animate({"width": "150%", "left":"-=8em"});
+			$('.bgcontainer').css("overflow", "initial")})
+		.mouseleave( function(){$(this).stop().animate({"width": "100%", "left":pos});
+			$('.bgcontainer').css("overflow", "hidden");});
+	
 
+	}
 
 	//display range slider value with realtime changes
 	function rangesliderDisplay() {
@@ -229,12 +256,14 @@ $(document).ready(function() {
 
  
 	function fadeinWelcome() {
+		 
 		 var hide = $('#container').html();
 		 //$('#pg1maincontent').hide().delay(2000, function(){$('#container').html(hide);});
 		$('#container').hide(function(){
 			$('#welcome').fadeIn(1000).fadeOut(1000, function() {
 				$('#container').fadeIn(1000);
 			});
+			
 		});
 		 
 		 //$('#container').addClass('welcome').fadeIn(1000);
