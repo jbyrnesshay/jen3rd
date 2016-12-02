@@ -169,12 +169,46 @@ $(document).ready(function() {
  	function selectaTopic() {
 		$('#tripvibe').change(function(){
 		var value = $(this).val();
+		//alert(value);
 		var div = '#'+value;
 		var content = $(div).html();
-		$('#display').html(content);});
-		waiting();
+		var limage='';
 		
-	}
+		
+		waiting();
+		//alert(value);
+		switch(value) {
+			case 'weather':
+			  limage = "images/weather.jpg";
+			  alt = "january day in Lhasa"
+			break;
+			case 'food':
+			  limage = "images/momos.jpg";
+			  alt = "plate of momos";
+			break;
+			case 'people':
+			  limage = "images/people.jpg";
+			  alt = "lhasa locals in Bharkor Squqre";
+			break;
+			case 'sights':
+			  limage = "images/sights.jpg";
+			  alt = "lhasa sights";
+			break;
+			//default: 
+			//break;*/
+		}
+		 
+		
+		content = content + "<img id ='trip_image' src='"+limage+"'>";
+		$('#display').html(content);
+		//alert(limage);
+		//$('#lhasa_image').attr("src", "limage")
+		//$("#display").append("<img src='limage'/>");
+
+
+	})};
+
+
 	function waiting() {
 		$("#display").hover(function(){
     $("#display").css("background-color", "aqua");

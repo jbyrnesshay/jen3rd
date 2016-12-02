@@ -271,13 +271,38 @@ body {
 	  
 }
 
-#pg1maincontent #centercol section {
-	display:none;
-}
-#display {
+#trip_image {
+	display: block;
 	width: 80%;
+	height: 325px;
+	top: 14.25em;
+	
+	border-radius: 15px;
+	border: 2px solid black;
+	position: absolute;
+	margin: .8em auto 0 4em;
+	
+	 
 }
 
+#pg1maincontent #centercol section {
+	display:none;
+	margin: 0 auto;
+	width: 100%;
+
+}
+#display {
+	width: 100%;
+	position: relative;
+	text-align: center;
+	margin: 0 auto;
+	height: 12em;
+	border-radius: 15px;
+
+}
+#trip_image {
+
+}
 /* overall site 3-column layout styling, some of which is overridden where needed by styling blocks for page 2 below*/
 #leftcol {
 	margin-top: 6.6em;
