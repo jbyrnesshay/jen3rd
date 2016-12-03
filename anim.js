@@ -13,6 +13,8 @@ $(document).ready(function(){
 				$('#startfun').css({"background": "orange", "fontStyle":"bolder", "fontSize":"1.4em"});
 			});
 		$('#startfun').click(function(){
+			
+			 
 		 	 figure = $('#character').val();
 			 placeCharacter();
 			 placeSetting();
@@ -101,7 +103,7 @@ $(document).ready(function(){
 		 	}
 		 	else if (posy ==375 && posx >= 325 && posx <= 375)
 		 		$('canvas').css({"background-image": "url('images/weather2.jpg", "background-size": "800px 400px"});
-		 	else if (posx == 400) {
+		 	else if (posx == 250) {
 		 		characterspeaks();
 		 	}
 		 	
@@ -147,7 +149,8 @@ $(document).ready(function(){
 	   			fontFamily: 'arial, sans-serif',
 		  	 	layer:true,
 		  	 	text: 'photo'
-  			});}
+  			})
+;}
 	//end place text on canvas
 
 //display animatable character
@@ -262,37 +265,41 @@ function characterspeaks() {
 	if (myname == '') {
 		myname= "the Unknown runner";
 	}
-
+	
 	var speak ="I'm "+myname+"!";
+	speak = speak.toUpperCase();
+
 
 	$('#anim').drawEllipse({
 		
 		strokeStyle: '#909',
 				strokeWidth: 5,
-				fillStyle: 'turquoise',
+				fillStyle: 'orange',
 				 
   x: 450, y: 200,
    
-  width: 200, height: 100,
+  width: 350, height: 100,
   layer:  true,
   groups: ['speech'],
   name: 'speechcontainer'
 }).drawText({
 		  		fillStyle: 'black',
 	   			x: 450,
-	   			y: 180,
-	   			fontSize:  '1em',
+	   			y: 200,
+	   			fontSize:  '1.3em',
+	   			fontStyle: 'bolder',
 	   			fontFamily: 'arial, sans-serif',
 		  	 	layer:true,
 		  	 	text: speak,
 		  	 	groups: ['speech'],
 		  	 	name: 'speechwords'
-  			}).delayLayerGroup('speech', 3000).animateLayerGroup('speech',{
+  			}).delayLayerGroup('speech', 1100).animateLayerGroup('speech',{
 	x: '-=600',
 	 
 }, 3000, function() {
 	$(this).removeLayerGroup('speech');
 }); }
+
 
 
 
