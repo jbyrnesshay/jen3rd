@@ -2,39 +2,43 @@
 <html>
   <head>
     <title>canvas</title>
-     
+  <meta charset="utf-8">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Allerta" rel="stylesheet">
+    <script src="https://use.fontawesome.com/8b1c1f159f.js"></script>
     <link href="canvasstyles.css" rel="stylesheet" type="text/css">
-    <meta charset="utf-8">
+    
   </head>
   <body id="canvasPage">
-  <!--
-      <header>   -->
-        <!-- for screenreaders that are not up-to-date and for the purposes of the course requirements -->
-      <!--  <nav role="navigation">
-            <h1> Canvas Time </h1>
-            <a href="#pg1maincontent" class="sronly">skip to main content</a>
-            <ul>
-                <li> <a href="index.html">
-                      <i class="fa fa-home" aria-hidden='true'>
-                        
-                      </i>Home
-                      </a> 
-                </li>
-                <li> <a href="canvas.html">
-                    canvas  </a>
-                  </li>
-                 <li> <a href="itinerary.html"> itinerary </a> </li>
-                 <li> <a href="test.html">test</a></li>
-            </ul>
-        </nav>
-        <br class="clearfix">
-        <!-- both h1 and link of class .sronly, found within the nav are floated-->
-      <!--</header>-->
+  
+          
+    <header>
+      <!-- for screenreaders that are not up-to-date and for the purposes of the course requirements -->
+      <nav role="navigation">
+         
+        <h1> My JCanvas page </h1>
+         
+        <a href="#canvasmaincontent" class="sronly">skip to main content</a>
+        <ul>
+          <li> <a href="index.html"><i class="fa fa-home" aria-hidden='true'></i>Home</a> </li>
+          <li> <a id="linkeffect" href="canvas.html">canvas</a></li>
+          <!--<li> <a href="canvas.html">canvas</a></li>-->
+          
+        </ul>
+      </nav>
+      <br class="clearfix">
+      
+      <!-- both h1 and link of class .sronly, found within the nav are floated-->
+    </header>
+    <!-- main on each page of the site have been given ids to help make targeted selectors as necessary for each page--> 
+    <!-- page 1 and page 2 main sections have ids of #pg1maincontent and #pg2maincontent respectively -->
+    <main id="canvascontent">
 
      
 
     <!-- start canvas game demo/animation section -->
     <div id="animwriter">
+      <header>
       <label for ="character">select a shape</label>
       <select id="character">
           <option selected value="default">please select</option>
@@ -42,10 +46,12 @@
         	<option value="square">square</option>
         	<option value="pie">pie slice</option>
       </select>
+        <div id="canvasbuttons">
           <button id ="startfun">start!</button>
           <button id="restart">restart!</button>
-          
-          <canvas id="anim" width="800" height="300"></canvas>
+          </div>
+          </header>
+          <canvas id="anim" width="800" height="400"></canvas>
           
          
     </div>
@@ -66,7 +72,8 @@
            <button id="emailsend">send</button>
       	</form>
 	 </div>
-
+</main>
+</body>
 
 
   <script

@@ -43,7 +43,7 @@ $(document).ready(function(){
 					 	}
 						break;
 				case 40:
-						if (posy + 25 <=275){
+						if (posy + 25 <=375){
 							$('#anim').animateLayer(figure, {
 							y: '+=25'
 							}, 50);
@@ -125,7 +125,7 @@ $(document).ready(function(){
   			drawText({
 		  		fillStyle: '#fff',
 	   			x: 350,
-	   			y: 275,
+	   			y: 375,
 	   			fontSize:  '1.4em',
 	   			fontFamily: 'arial, sans-serif',
 		  	 	layer:true,
@@ -229,7 +229,7 @@ $(document).ready(function(){
 		 		  strokeWidth: 5,
 		 		  fillStyle: '#f0f',
 		 		  x: 350, 
-		 		  y: 275,
+		 		  y: 375,
 		 		  width: 100,
 		 		  height: 50,
 		 		  layer: true,

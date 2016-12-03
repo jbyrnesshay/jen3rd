@@ -10,7 +10,7 @@ $(document).ready(function() {
 		 	//$('#linkeffect')
 //		 	$('#linkeffect').attr('href', 'canvas.html').mousedown();
 		 }
-	
+	var count = 1;
 	//listener and implementation of range slidtrigger('click')er values display while changing
 	 
 	fadeinWelcome();
@@ -43,7 +43,9 @@ $(document).ready(function() {
     setTimeout(function(){
          window.location = goTo;
     },1500);       
- 
+
+
+
 		/*setTimeout(function(){
   		alert("Boom!");
 		}, 3000).setTimeout( function() {
@@ -328,8 +330,10 @@ function tripimagelistener(){
 				$('#container').fadeIn(1000);
 			});
 			
-		});
+		});}
 		 
+
+	 
 		 //$('#container').addClass('welcome').fadeIn(1000);
 		 
 		 //.fadeIn(2500);
@@ -338,7 +342,7 @@ function tripimagelistener(){
 
 
 		//$('body').fadeIn(3000);
-	}
+	
 
 	function maketableLarge(){
 		 

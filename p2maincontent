@@ -14,7 +14,6 @@ html {
 }
 canvas  {
 	border: 1px solid black;
-	background: aliceblue;
 }
 
   
@@ -27,19 +26,14 @@ canvas  {
  	 
  }
 #animwriter {
-	float: left;
-	margin-top: 8em;
-margin-left: 10em;
-
+	position: absolute;
+	
+	
+	 top: 18em;
+margin-left: 1em;
 
  
 width: 800px;
-}
-#animwriter header {
-	border: 1px solid black;
-position: relative;
-background: antiquewhite;
-padding-top: .8em;
 }
 #right{
 	width: 400px;
@@ -75,17 +69,4 @@ form {
  	height: 170px;
  	width: 350px;
  	display: block;
- }
-
- #canvasbuttons {
- 	float: right;
- 	margin-right: 5em;
- 	
- }
- #canvasbuttons button {
- 	margin-left: 3em;
- }
-
- #canvascontent {
-	text-transform: uppercase;
  }

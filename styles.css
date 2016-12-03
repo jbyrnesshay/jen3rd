@@ -782,8 +782,8 @@ blockquote p {
 	font-size: .9em;
 }
 
-
-/*style page 2 rightcolumn list*/
+/*
+ 
 #pg2maincontent section#rightcol ul {
 	width: 100%;
 	padding-right: 1em;
@@ -791,13 +791,13 @@ blockquote p {
 #pg2maincontent section#rightcol li {
 	font-size: .9em; 
 }
-/* allows me to style my h4 inline with paragraph content in center column, for design reasons */
+ 
 #pg2maincontent #centercol article p:not(.imgcopywrite), #pg2maincontent #centercol h4 {
 	display: inline;
 }
 
  
-/*style page 2 centercolumn */
+ 
 #pg2maincontent #centercol p {
 	margin-top: 0;
 	margin-bottom: 0;
@@ -817,7 +817,7 @@ blockquote p {
 }
 
  
-/*style page 2 images */
+ 
 #pg2maincontent img {
 	margin: .5em;
 	border: 1px solid black;
@@ -828,9 +828,9 @@ img[src*="sera"] {
 	 margin-top: 0;
 }
 
-/*end page 2-specific styling section */
+ 
 
-
+*/
 
 /*== this was practice to make the site look better if I resized windows==*/
 /*it made the page function better so I kept it in, you may ignore*/
