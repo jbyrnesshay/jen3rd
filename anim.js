@@ -284,7 +284,7 @@ function showemail() {
 	
 	$('#right').show(600).animate({
 		 
-		right: "140", height: "400px", top: "140"
+		right: "130", height: "400px", top: "160"
 		},1000
 	);//endanimate
 	handleemail();

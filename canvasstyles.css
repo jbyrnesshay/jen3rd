@@ -6,7 +6,7 @@ html {
 }
 
 #canvasPage header {
-	margin-bottom: 3em;
+	margin-bottom: 2em;
 	}
 #canvasPage h1 {
 	float: none;
@@ -16,6 +16,7 @@ canvas  {
 	border: 1px solid black;
 	background: aliceblue;
 	border: 10px solid black;
+	border-radius: 10px;
 }
 #canvasPage {
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a1a1a1+0,a1a1a1+100&1+0,0+100 */
@@ -36,19 +37,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1a1a1', end
  }
 #animwriter {
 	float: left;
-	margin-top: 8em;
+	margin-top: 6em;
 margin-left: 10em;
 
 
  
 width: 800px;
 }
-#animwriter header {
+#animwriter header, #canvasPage #instructions {
 	border: 1px solid black;
 position: relative;
-background: brown;
+background: linen;
 padding-top: .5em;
-color: white;
+color: black;
+border-radius: 10px;
+}
+#canvasPage #instructions {
+	padding:.5em 2em .5em 2em;
+	margin-top: 0;
+ 
 }
 #right{
 	width: 400px;
