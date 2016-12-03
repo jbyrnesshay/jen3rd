@@ -6,6 +6,7 @@ $(document).ready(function(){
 		var posy='';
 		var posx='';
 		var test='';
+		var speakinstance = 0;
 		//is the game start button clicked
 
 		$('#character').change(function() {
@@ -17,6 +18,7 @@ $(document).ready(function(){
 			 placeSetting();
 			 $('#selectmessage').text('click restart to clear canvas');
 			 $('#startfun').css({"background": "antiquewhite", "fontStyle":"normal", "fontSize":"1.2em"});
+
 		});
 		//restart button functioning
 		$('#restart').click(function() {
@@ -99,6 +101,9 @@ $(document).ready(function(){
 		 	}
 		 	else if (posy ==375 && posx >= 325 && posx <= 375)
 		 		$('canvas').css({"background-image": "url('images/weather2.jpg", "background-size": "800px 400px"});
+		 	else if (posx == 400) {
+		 		characterspeaks();
+		 	}
 		 	
 		 	
 			else {
@@ -252,7 +257,42 @@ $(document).ready(function(){
 		 	walltext();
 	}//end set non-character display on canvas
 
+function characterspeaks() {
+	var myname = $('#yourname').val();
+	if (myname == '') {
+		myname= "the Unknown runner";
+	}
 
+	var speak ="I'm "+myname+"!";
+
+	$('#anim').drawEllipse({
+		
+		strokeStyle: '#909',
+				strokeWidth: 5,
+				fillStyle: 'turquoise',
+				 
+  x: 450, y: 200,
+   
+  width: 200, height: 100,
+  layer:  true,
+  groups: ['speech'],
+  name: 'speechcontainer'
+}).drawText({
+		  		fillStyle: 'black',
+	   			x: 450,
+	   			y: 180,
+	   			fontSize:  '1em',
+	   			fontFamily: 'arial, sans-serif',
+		  	 	layer:true,
+		  	 	text: speak,
+		  	 	groups: ['speech'],
+		  	 	name: 'speechwords'
+  			}).delayLayerGroup('speech', 3000).animateLayerGroup('speech',{
+	x: '-=600',
+	 
+}, 3000, function() {
+	$(this).removeLayerGroup('speech');
+}); }
 
 
 
