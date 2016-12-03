@@ -55,15 +55,17 @@ color: white;
 	display: inline-block;
 	 
 	 margin-top: 5em;
-	  
+	 
 	 right:0;
 	border: 10px solid red;
 	position: absolute;
 	padding: 0 0 0 1.5em;
 	background: antiquewhite;
 	color: black;
-	font-size: 1.5em;
+	font-size: 1.2em;
+	text-align: left;
 	font-style: bolder;
+	height: 10em;
 
 }
 header label {
@@ -76,36 +78,68 @@ header label {
 	visibility: hidden;
 }
  
-form {
+#canvasmaincontent form {
 	position: relative;
  }
+#emailrecipient, #emailsubject {
+ 	margin-bottom: 1em;
+
+ }
+ #emailnotice {
+ 	font-size: 1em;
+ 	border-bottom: 5px solid red;
+ 	display: inline-block;
+ 	margin: 0 auto 1em auto;
+  
+ }
+ #right button {
+ 	display:  absolute;
+ 	width: 3em;
+ 	font-size: 1.2em;
+
+ }
  input[type="email"], input[type="text"] {
+ 	border: 2px solid red;
+ 	display: block;
+ }
+ #right a {
+ 	visibility: visible;
  	display: block;
  }
  textarea {
+ 	border: 2px solid red;
  	height: 170px;
- 	width: 350px;
+ 	width: 285px;
  	display: block;
- }
+ 	margin: 0 auto;
+ 	position: relative;
+ 	margin-right: 4em;
+ 	margin-bottom: 2em;
+ 	 }
 
  #canvasbuttons {
  	float: right;
- 	margin-right: 5em;
+ 	margin-right: 9em;
  	
  }
  #canvasbuttons button {
- 	margin-left: 3em;
+ 	margin-left: 1em;
  	text-transform: uppercase;
  	font-size: 1.2em;
  	border-radius: 10px;
  	background: orange;
  	background: antiquewhite;
  }
-
+#canvasbuttons button:nth-of-type(2){
+	position: absolute;
+	float: right;
+}
  #canvascontent {
 	text-transform: uppercase;
  }
 
  #animwriter select {
-
+	height: 2em;
+	border-radius: 10px;
+	margin-left: .5em;
  }

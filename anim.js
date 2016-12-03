@@ -7,10 +7,16 @@ $(document).ready(function(){
 		var posx='';
 		var test='';
 		//is the game start button clicked
+
+		$('#character').change(function() {
+				$('#startfun').css({"background": "orange", "fontStyle":"bolder", "fontSize":"1.4em"});
+			});
 		$('#startfun').click(function(){
 		 	 figure = $('#character').val();
 			 placeCharacter();
 			 placeSetting();
+			 $('#selectmessage').text('click restart to clear canvas');
+			 $('#startfun').css({"background": "antiquewhite", "fontStyle":"normal", "fontSize":"1.2em"});
 		});
 		//restart button functioning
 		$('#restart').click(function() {
@@ -18,6 +24,9 @@ $(document).ready(function(){
 			$('#anim').removeLayers().drawLayers();
 			$('#character').val('default');
 			$('body').css("background", "white");
+			$('#selectmessage').text('select your character shape')
+			
+
 		});
 		 
 		 $('#right').hide();
@@ -275,10 +284,21 @@ function showemail() {
 	
 	$('#right').show(600).animate({
 		 
-		right: "150", height: "300px", top: "100"
+		right: "140", height: "400px", top: "140"
 		},1000
 	);//endanimate
 	handleemail();
 	}
 });
+ 
+function handleemail() {
+	$('#emailsend').click(function() {
+			var recipient = $('#emailrecipient').val();
+			var subject = $('#emailsubject').val;
+			var message = $('#emailmessage').val;
+			var mailhref = "mailto:"+recipient+"?subject="+subject+"&body="+message;
+	})
+	 
+}
+
  

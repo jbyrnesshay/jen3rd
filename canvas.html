@@ -40,6 +40,7 @@
     <div id="animwriter">
       <header>
       <label for ="character" id="selectmessage">select your character shape</label>
+       
       <select id="character">
           <option selected value="default">please select</option>
         	<option value="circle">circle</option>
@@ -63,17 +64,21 @@
  
     <div id="right">
      
-        <label for="email" id="emailformmessage">this will open your default mail client</label>
-      	<form id="email" novalidate>
+        <label for="email" id="emailnotice">send with default mail client</label>
+      	<form id="email" validate>
             
-      	   <input type='email' id='emailfield' placeholder='recipient address' required>
-           <input type="text" placeholder="subject">
-           <textarea id="message"></textarea>
-           <button id="emailsend">send</button>
+      	   <input type='email' id='emailrecipient' placeholder='recipient address' required>
+           <input type='text' id='emailsubject' placeholder='subject'>
+           <textarea id="emailmessage" placeholder='your message here'> </textarea>
+           <!--<a id="emailsend" href="mailto:">send</a>
+           -->
+           <button>send email</button>
+           
+ 
       	</form>
 	 </div>
 </main>
-</body>
+ 
 
 
   <script
