@@ -15,8 +15,16 @@ html {
 canvas  {
 	border: 1px solid black;
 	background: aliceblue;
+	border: 10px solid black;
 }
+#canvasPage {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a1a1a1+0,a1a1a1+100&1+0,0+100 */
+background: -moz-linear-gradient(top,  rgba(161,161,161,1) 0%, rgba(161,161,161,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(161,161,161,1) 0%,rgba(161,161,161,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(161,161,161,1) 0%,rgba(161,161,161,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1a1a1', endColorstr='#00a1a1a1',GradientType=0 ); /* IE6-9 */
 
+}
   
  #canvasPage button {
  	/*display: inline-block;*/
@@ -38,8 +46,9 @@ width: 800px;
 #animwriter header {
 	border: 1px solid black;
 position: relative;
-background: antiquewhite;
-padding-top: .8em;
+background: brown;
+padding-top: .5em;
+color: white;
 }
 #right{
 	width: 400px;
@@ -48,16 +57,18 @@ padding-top: .8em;
 	 margin-top: 5em;
 	  
 	 right:0;
-	border: 1px solid red;
+	border: 10px solid red;
 	position: absolute;
 	padding: 0 0 0 1.5em;
-	background: aqua;
-	color: white;
+	background: antiquewhite;
+	color: black;
 	font-size: 1.5em;
 	font-style: bolder;
 
 }
-
+header label {
+	padding-top: 1em;
+}
 .enable {
 	visibility: visible;
 }
@@ -84,8 +95,17 @@ form {
  }
  #canvasbuttons button {
  	margin-left: 3em;
+ 	text-transform: uppercase;
+ 	font-size: 1.2em;
+ 	border-radius: 10px;
+ 	background: orange;
+ 	background: antiquewhite;
  }
 
  #canvascontent {
 	text-transform: uppercase;
+ }
+
+ #animwriter select {
+
  }

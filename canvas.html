@@ -39,7 +39,7 @@
     <!-- start canvas game demo/animation section -->
     <div id="animwriter">
       <header>
-      <label for ="character">select a shape</label>
+      <label for ="character" id="selectmessage">select your character shape</label>
       <select id="character">
           <option selected value="default">please select</option>
         	<option value="circle">circle</option>
@@ -63,10 +63,10 @@
  
     <div id="right">
      
-        <label for="email">this will open your default mail client</label>
-      	<form id="email">
-            <input type="radio" value="test">test
-      	   <input type="email" placeholder="recipient address">
+        <label for="email" id="emailformmessage">this will open your default mail client</label>
+      	<form id="email" novalidate>
+            
+      	   <input type='email' id='emailfield' placeholder='recipient address' required>
            <input type="text" placeholder="subject">
            <textarea id="message"></textarea>
            <button id="emailsend">send</button>

@@ -11,6 +11,7 @@ $(document).ready(function(){
 		 	 figure = $('#character').val();
 			 placeCharacter();
 			 placeSetting();
+			 $('#selectmessage').html('click restart when ready to try again');
 		});
 		//restart button functioning
 		$('#restart').click(function() {
@@ -18,13 +19,14 @@ $(document).ready(function(){
 			$('#anim').removeLayers().drawLayers();
 			$('#character').val('default');
 			$('body').css("background", "white");
+			$('#selectmessage').html('select your character shape');
 		});
 		 
 		 $('#right').hide();
 	 
 		//keydown listenere to control character motion
 		//using body  because document causes problems with firefox
-		 $('body').keydown(function(e) {
+		$('body').keydown(function(e) {
 
 
 			//var keypress=event.which;
@@ -100,12 +102,12 @@ $(document).ready(function(){
 			}//end if else
 		 });//end keydown
 
+});//enddocment ready
  
-
 //functions 
 
 
- function walltext() {
+	function walltext() {
 			$('#anim').drawText({
 		  		fillStyle: '#fff',
 	   			x: 600,
@@ -137,7 +139,7 @@ $(document).ready(function(){
 	//end place text on canvas
 
 //display animatable character
-	 function placeCharacter() {
+	function placeCharacter() {
 		//disable select box once character is selected
 		$('#character').addClass('disable');
 		var color = "blue";
@@ -204,7 +206,7 @@ $(document).ready(function(){
 
 	//draw non-character graphics on canvas
 	
- function placeSetting() {
+	function placeSetting() {
 		 	$('#anim').drawRect({
 				strokeStyle: '#909',
 				strokeWidth: 5,
@@ -265,7 +267,6 @@ $(document).ready(function(){
 		}
 		 
 	}//end email fucntion
- 
 
 
 function showemail() {
@@ -280,5 +281,7 @@ function showemail() {
 	);//endanimate
 	handleemail();
 	}
-});
- 
+
+
+
+  //end doc ready
