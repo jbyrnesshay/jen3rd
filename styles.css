@@ -20,7 +20,7 @@ html {
 	margin-left: 10px;
 }
 body {
-    font-size: 100%;
+    font-size: 96%;
     margin: 0;
     padding: 0;
     top: 0;
@@ -300,7 +300,7 @@ img#tripimage {
 	display: block;
 	width: 100%;
 	height: 325px;
-	top: 18.5em;
+	top: 20em;
 	z-index: 110;
 	border-radius: 15px;
 	border: 10px solid black;
@@ -358,7 +358,7 @@ img#tripimage {
 	 
 	text-align: center;
 	margin: .5em auto 0 auto;
-	height: 15.5em;
+	height: 17.5em;
 	border-radius: 10px;
 	display:none;
 
@@ -367,13 +367,13 @@ img#tripimage {
 	margin-top: .25em;
 	background: aqua;
 	position: absolute;
-	height: 13em;
+	height: 16em;
 	border-radius: 15px;
 }
  
 /* overall site 3-column layout styling, some of which is overridden where needed by styling blocks for page 2 below*/
 #leftcol {
-	margin-top: 5.6em;
+	margin-top: 4.5em;
 	width: 40%; 
 	float: left;
 	font-size: .9em;
@@ -388,7 +388,7 @@ img#tripimage {
 	top: 0;
 	bottom: 0;
 	margin: 0 auto;
-	margin-top: 5.6em;
+	margin-top: 4.5em;
 	border-left: 1px solid red;
 	border-right: 1px solid red;
 	border: 5px solid black;
@@ -421,7 +421,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5fcff', end
 	width: 30%;
 	word-wrap: break-word;
 	font-size: .9em;
-	margin-top: 5.6em;
+	margin-top: 4.5em;
 	bottom: 0;
 	padding: 0 25px 0 25px;
 }
@@ -577,14 +577,7 @@ font-size: 1.45em;
 font-weight: bold;
 font-family: serif;
 }
- 
-/*page 1 jokhang temple image, figure, figcaption, content styling */
- 
-/* uniquely styles hover background of figure link, due to conflicting contrast with main styling*/
-
-#jokhangtemple, #imager {
-	display:none;
-}
+  
 
 
 /*-- styling for page 1 table --*/
@@ -702,86 +695,7 @@ table + footer p {
 /* end page 1-specific styling section */  
  
 
-
-/*=== start page 2-specific styling ===*/
-/**/
-blockquote {
-	margin: 2em auto 0 auto;
-	position: relative;
-	height:160px;
-	width:200px;
-	border: 1px solid black;
-	font-weight: bolder;
-	font-size: 1.1em;
-	color: black;
-	border-radius: 10px;
-}
-/*style blockquote for transparent background image */
-blockquote::after {
-  content: "";
-  background: url(images/background2.png) no-repeat;
-  opacity: 0.4;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;   
-}
-blockquote p {
-	padding-left: 1em;
-	padding-top: 1.5em;
-}
-.cite {
-	text-indent: 25px;
-	font-size: .9em;
-}
-
-/*
- 
-#pg2maincontent section#rightcol ul {
-	width: 100%;
-	padding-right: 1em;
-}
-#pg2maincontent section#rightcol li {
-	font-size: .9em; 
-}
- 
-#pg2maincontent #centercol article p:not(.imgcopywrite), #pg2maincontent #centercol h4 {
-	display: inline;
-}
-
- 
- 
-#pg2maincontent #centercol p {
-	margin-top: 0;
-	margin-bottom: 0;
-}
-#pg2maincontent div {
-	 float: left;
-	 margin-bottom: 1em;
-	 margin-top: 0;
-	 padding-top: 0;
-}
-#pg2maincontent article:nth-of-type(2) {
-	margin-top: 1em;
-}
-#pg2maincontent #centercol article {
-	padding-bottom: 0;
-	border-bottom: 1px solid red;
-}
-
- 
- 
-#pg2maincontent img {
-	margin: .5em;
-	border: 1px solid black;
-	border-radius: 10px;
-	width: 90%;
-}
-img[src*="sera"] {
-	 margin-top: 0;
-}
+  
 
  
 
