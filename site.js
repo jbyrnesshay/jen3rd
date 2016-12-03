@@ -298,7 +298,7 @@ function tripimagelistener(){
 		var height = $('#tripimage').css("height");
 		var top = $('#tripimage').css("top");
 		var width=$('#tripimage').css('width');
-		$('#tripimage').mouseenter(function(){$(this).stop().animate({"width": "160%", "height":"70%","left":"-=9.5em", "top":"-=15em"});
+		$('#tripimage').mouseenter(function(){$(this).stop().animate({"width": "140%", "height":"70%","left":"-=6.5em", "top":"-=15em"});
 			 
 			$('#centercol article').css("visibility", "hidden");
 		 
