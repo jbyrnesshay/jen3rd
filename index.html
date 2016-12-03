@@ -81,7 +81,7 @@
 		 				<p> altitude from <a href="http://whatismyelevation.com">whatsmyelevation</a></p>
 		 			</footer>
 					</div>
-					</position>
+					</div>
 		 		</article>	
 		 	</section>
  			<section id="centercol">
@@ -127,83 +127,92 @@
 				</div>
 			</section>
 			<section id="rightcol">
-				<h2> ORDER TIBETAN FOOD</h2>
- 				<aside>
-
-					<form id="userinfo" novalidate action="" method=""> 
-
-					<fieldset>
-					<legend></legend>
-					 
-
-						<!-- add labels, instead of naked text descript -->
-						<label for ="name">your name</label>
-						 <input type="text" placeholder="ENTER FIRST NAME" id="name" name="name" aria-required="true" autofocus></input> 
-						 <div id="nameerror"><br></div>
-						 <label for = "title" id="titlelab" aria-required="false">add aasgsag? yes </label>
-						 <input type="checkbox" name="title" id="title" value="yes"></input><br>
-						<p id="question">what type of guy are you</p>
-						<label>
-						 <input type="radio" value="decline" name="gender" checked aria-labelledby="question" role="radiogroup" aria-checked="true">decline<br>
-						 </label>
-				         <label>
-						 <input type="radio" value="male" name="gender" checked aria-labelledby="question" role="radiogroup" aria-checked="false">male<br>
-						 </label>
-						 <label>
-						 <label>
-						 <input type="radio" value="female" name="gender" checked aria-labelledby="question" role="radiogroup" aria-checked="false">female<br>
-						 </label><label>
-
-						 <input type="radio" value="other" name="gender" checked aria-labelledby="question" role="radiogroup" aria-checked="false">other</br>
-						 </label>
-						 <div id="gendererror"><br></div>
-						 <label for = "phone">phone number </label>
-						 	<input type="tel" id="phone" aria-required="false">
-						 <label for="email">email</label>
-						 	<input type="email" id="email" aria-required="false">
-						 	<label for ="count">how many pies you like (2-5)</label>
-						 <input type ="number" id='count' min='2' max ='5'>
+          <h2> ORDER TIBETAN FOOD
+          </h2>
+          <aside>
+            <form id="userinfo" novalidate action="" method=""> 
+              <fieldset>
+                <legend>
+                </legend>
+                <!-- add labels, instead of naked text descript -->
+                <label for ="name">your name
+                </label>
+                <input type="text" placeholder="ENTER FIRST NAME" id="name" name="name" aria-required="true" autofocus> 
+                <div id="nameerror">
+                  <br>
+                </div>
+                <br>
+                <label for = "phone">phone number 
+                </label>
+                <input type="tel" id="phone" aria-required="false">
+                <!-- 	
+<label for ="orderemail">your email</label>-->
+                <!--<input type="email" placeholder="enter email" id="orderemail">-->
+                <label for "food">which food?
+                </label>
+                <select id="food">
+                  <option selected>select one
+                  </option>
+                  <option value="momos">momos
+                  </option>
+                  <option value="yak">yak steak
+                  </option>
+                  <option value="barley">barley porridge
+                  </option>
+                  <option value="noodlesoup">noodle soup
+                  </option>
+                  <option value="buttertea">butter tea
+                  </option>
+                </select>
+                <br>
+                <label for ="count"># of units (2-5)
+                </label>
+                <input type ="number" id='count' min='2' max ='5'>
+				
+				 
 					 </fieldset>
+<div id = "rangestyle">
+                <label for = "range">How fast in days do you prefer it shipped?
+                </label>
+                <div id="rangefill">3&nbsp;
+                </div>
+                <input type="range" id = "range" min='3' max='20' value="3" name="rangeval">
+                <br>
+              </div>
+              <br>
+              <div id="timemessage">
+                <p>a good time to go
+                </p>
+              </div>
+              <br>
+              <label for="when" id="goodtime">latest date you will accept delivery?
+              </label>
+              <input type="date" id="when" name="when">
+              <div id="dateerror">
+                <br>
+              </div>
+              <label for ="color">what color packaging do you prefer?
+              </label>
+              <input type="color" id="color" value="#d2b48c" name="color">
+              <div class="msg">
+              </div>
 
-
-					 <div id = "rangestyle">
-
-					 <label for = "range">How many days do you want to go?</label>
-					 <div id="rangefill">3&nbsp;</div>
-					<input type="range" id = "range" min='0' max='10' value="3" name="rangeval"><br>
-					</div>
-					<br>
-					<div id="timemessage"><p>a good time to go</p></div><br>
-					<label for="when" id="goodtime">when to go?</label>
-
-					<input type="date" id="when" name="when">
-					<div id="dateerror"><br></div>
-					<input type="color" id="color" name="color">
-
-					<select id="filling">
-						<option selected>select one</option>
-						<option value="apple">apple</option>
-						<option value="blueberry">blueberry</option>
-						<option value="cherry">cherry</option>
-					</select>
-					<div class="msg"></div>
-					<label for ="comments">Special requests: </label>
-						<textarea id="comments" placeholder="any additional instructions for me"></textarea>
-
+					  
+		 
 
 					<input type="submit" value="Submit">
 
 					</form>
 					<br class="clearfix">
-
+					<ul>
 						<li>Dumplings</li>
 						<li>yak meat</li>
 						<li>barley porridge</li> 
 						<li>noodle soup</li>
 						<li>butter tea.</li>
 					</ul>
-				</aside>
-				<article id="jokhang">
+				 
+				<article > 
 					<h3> jokhang temple </h3>
 					<!-- area-labelledby used to satisfy the requirements of assgnment2 -->
 					<figure aria-labelledby ="jokhangtemple">

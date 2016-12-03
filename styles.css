@@ -395,7 +395,7 @@ img#tripimage {
 	border-radius: 10px;
 	font-size: .9em;
 	display: inline-block;
-	height:60%;
+	height:100%;
 	max-width: 40%;
 	padding: 0 25px 0 25px;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5fcff+0,f7fdff+50,f7fdff+51,fbfeff+100 */
@@ -411,7 +411,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5fcff', end
 .bgcontainer{
     position: relative;
     z-index:1;
-    overflow:hidden; 
+    
     height: 100%;
 }
 
@@ -570,15 +570,7 @@ a[href*="jigsaw"]:hover, a[href*="nu"]:hover {
 	font-size: 1.1em;
 }
 /* page 1 rightcolumn list */
-#rightcol ul {
-	width:80%;
-	margin: 0;
-	padding: 0 0 0 2em;
-	margin: 0 auto;
-}
-#rightcol ul li {
-	padding: 10px;
-}
+
 /*uniquely styles first letter of first word on page 1 rightcolumn list */
 #rightcol li::first-letter {
 font-size: 1.45em;
@@ -587,49 +579,12 @@ font-family: serif;
 }
  
 /*page 1 jokhang temple image, figure, figcaption, content styling */
- #jokhang {
-	background: #a2f7eb;
-	text-align: center;
-	display: block;
-	border: 1px solid black;
-	border-radius: 10px;
-	width: 80%;
-	margin: 4em auto 0 auto;
-}
-#rightcol figure {
-	margin: 0 auto;
-	width: 80%;
-	 
-}
-/* uniquely styles hover background of figure link, due to conflicting contrast with main styling*/
-figure a:hover {
-	background: #fae1d1;
-}
-#rightcol figure + p {
-	 
-	text-align: left;
-	width: 80%;
-	margin: 0 auto;
-	padding: 1em 0 1em 0;
-}
-#rightcol img {
-	width: 100%;
-	margin: 0 auto;
-	border-radius: 10px;
-}
-figcaption {
-	text-align:left;
-	padding-bottom: 1em;
-	padding-left: 0em;
-}
-figcaption p {
-	font-size:.8em;
-	display: block;
-	margin-bottom: 1em;
-	margin-top: 0;
-}
-/*end styling of jokhang temple image and figure block, page 1*/
  
+/* uniquely styles hover background of figure link, due to conflicting contrast with main styling*/
+
+#jokhangtemple, #imager {
+	display:none;
+}
 
 
 /*-- styling for page 1 table --*/

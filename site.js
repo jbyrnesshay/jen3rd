@@ -297,14 +297,15 @@ function tripimagelistener(){
 */		var left = $('#tripimage').css("left");
 		var height = $('#tripimage').css("height");
 		var top = $('#tripimage').css("top");
+		var width=$('#tripimage').css('width');
 		$('#tripimage').mouseenter(function(){$(this).stop().animate({"width": "160%", "height":"70%","left":"-=9.5em", "top":"-=15em"});
-			$('.bgcontainer').css("overflow", "initial");
+			 
 			$('#centercol article').css("visibility", "hidden");
 		 
 
 			$('#tripimage').css("visibility", "visible")})
-		.mouseleave( function(){$(this).stop().animate({"width": "100%", "height": height,"left":left, "top":top}, function(){
-			$('.bgcontainer').css("overflow", "hidden");
+		.mouseleave( function(){$(this).stop().animate({"width": width, "height": height,"left":left, "top":top}, function(){
+			 
 			$('#centercol article').css("visibility", "visible")})
 		});
 			
