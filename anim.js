@@ -331,13 +331,62 @@ function showemail() {
 	
 	$('#right').show(600).animate({
 		 
-		right: "130", height: "400px", top: "160"
+		right: "130", height: "450px", top: "160"
 		},1000
 	);//endanimate
 	handleemail();
 	}
 });
  
+function handleemail() {
+	 
+	//$('#emailsend').click(function() {
+		$('#emailsend').click(function(submit){
+		if ($('#emailrecipient').val().length == 0) {
+			//console.log('you forgot the name field!');
+			$('label[for="emailrecipient"]').html('Enter address.').addClass('error');
+			submit.preventDefault();
+		}
+		else if ($('#emailsubject').val().length == 0) {
+			//console.log('you forgot the subject field!');
+			$('label[for="emailsubject"]').html('Enter subject.').addClass('error');
+			submit.preventDefault();  
+		}
+		//else if ($('#emailmessage').val() == ''){
+			
+		else if (!($("#emailmessage").val()) ) {
+			//console.log('you forgot the message field!');
+			//alert('it is so');
+			$('label[for="emailmessage"]').html('Enter message.').addClass('error');
+			//return false;
+			submit.preventDefault();
+		}
+		 else {
+			 var recipient = $('#emailrecipient').val();
+			var subject = $('#emailsubject').val();
+			var message = $('#emailmessage').val();
+			var mailhref="testit";
+			var mailhref = "mailto:"+recipient+"?subject="+subject+"&body="+message;
+			submit.preventDefault()
+			$("#emailer").attr("href", "http://google.com");
+			 
+			 
+			$(location).attr('href', mailhref);
+			
+			
+		 }
+			 
+		
+	}); //end click
+		//alert(mailhref);
+			
+//alert(mailhref); 
+			//$('#emailsend').attr("href", mailhref);
+	//});
+	}
+
+/*
+
 function handleemail() {
 	$('#emailsend').click(function() {
 			var recipient = $('#emailrecipient').val();
@@ -349,5 +398,6 @@ function handleemail() {
 	});
 	 
 }
+*/
 
  

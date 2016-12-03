@@ -69,17 +69,23 @@
     <div id="right">
      
         <label for="email" id="emailnotice">opens your default mail client</label>
-      	<form id="email" validate>
-            
-      	   <input type='email' id='emailrecipient' placeholder='recipient address' required>
+      	<form id="email" novalidate>
+            <label for="emailrecipient">recipient address</label>
+      	   <input type='email' id='emailrecipient' placeholder='email address' required>
+		         <label for="emailsubject">subject</label>
            <input type='text' id='emailsubject' placeholder='subject'>
-           <textarea id="emailmessage" placeholder='your message here'> </textarea>
-          <a id="emailsend" href="mailto:">send</a>
-         
+		         <label for="emailmessage">message</label>
+           <textarea id="emailmessage" name='message'></textarea>
+          <!--<a id="emailsend" href="mailto:">send</a>-->
+		  <button id="emailsend" value="submit">send</button>
+		  <button id="closemail" value="close">close</button>
+		 
             <!--<button>send email</button>  -->
            
  
       	</form>
+		 <a id="emailer" href=""></a>
+         
 	 </div>
 </main>
  

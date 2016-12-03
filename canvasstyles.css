@@ -61,20 +61,20 @@ height: 5em;
 }
 #right{
 	width: 400px;
-	display: inline-block;
+	display: none;
 	 
 	 margin-top: 5em;
 	 
 	 right:0;
 	border: 10px solid red;
 	position: absolute;
-	padding: 0 0 0 1.5em;
+	padding: .75em 0 0 1.5em;
 	background: antiquewhite;
 	color: black;
-	font-size: 1.2em;
+	font-size: 1em;
 	text-align: left;
-	font-style: bolder;
-	height: 10em;
+	font-weight: bolder;
+	height: 25em;
 
 }
 header label {
@@ -94,13 +94,17 @@ header label {
  	margin-bottom: 1em;
 
  }
+ form#email {
+	 margin-top: 0em;
+	padding-top: 0;
+ }
  label#namerequest {
  	display: inline-block;
  }
  #yourname {
  	display:inline-block;
  }
- a#emailsend {
+ a#emailsend{
  	text-decoration:none;
  	border: 1px solid black;
  	border-radius: 15px;
@@ -108,12 +112,58 @@ header label {
  	background: #F4F4F4;
  	color: black;
  	text-align:center;
- 	font-style: bolder;
+ 	font-weight: bolder;
  	font-size: 1.2em;
  	display: inline-block;
  	position: absolute;
  	width: 100px;
+	margin-top: 0;
  }
+ button#emailsend{
+ 	text-decoration:none;
+ 	border: 1px solid black;
+ 	border-radius: 15px;
+ 	padding: .5em;
+ 	background: #F4F4F4;
+ 	color: black;
+ 	text-align:center;
+ 	font-weight: bolder;
+ 	font-size: 1.2em;
+ 	display: inline-block;
+ 	position: absolute;
+ 	width: 5em;
+	margin-top:0;
+	left: 0;
+	text-transform: uppercase;
+ }
+  #closemail {
+	  
+ 	border: 1px solid black;
+ 	border-radius: 15px;
+ 	padding: .5em .75em .5em .5em;
+ 	background: #F4F4F4;
+ 	color: black;
+ 	text-align:center;
+ 	font-weight: bolder;
+ 	font-size: 1.2em;
+ 	display: inline-block;
+ 	position: absolute;
+ 	 
+	right: 1em;
+	text-transform: uppercase;
+	width: 5em;
+ }
+	  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
  a#emailsend:hover {
  	color: red;
  }
@@ -124,12 +174,9 @@ header label {
  	margin: 0 auto 1em auto;
   
  }
- #right button {
- 	display:  absolute;
- 	width: 3em;
- 	font-size: 1.2em;
-
- }
+ 
+	 
+ 
  input[type="email"], input[type="text"] {
  	border: 2px solid red;
  	display: block;
@@ -145,14 +192,17 @@ header label {
  	display: block;
  	margin: 0 auto;
  	position: relative;
- 	margin-right: 4em;
- 	margin-bottom: 2em;
+ 	margin-right: 5em;
+ 	margin-bottom: .75em;
  	 }
 
  #canvasbuttons {
  	float: right;
  	margin-right: 9em;
  	
+ }
+ #emaillink {
+	  
  }
  #canvasbuttons button {
  	margin-left: 1em;

@@ -785,8 +785,10 @@ input[type='range'] {
 }
 .error {
 	border: 2px solid red;
-	background: red;
-	color: white;
+	background: orange;
+	color: black;
+	font-weight: bolder
+	font-size: 1em;
 }
 
 
