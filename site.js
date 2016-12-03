@@ -4,26 +4,81 @@ $(document).ready(function() {
 	
 	
 		
-
- 
+//var toLoad = $('#linkeffect').attr('href') + "='canvas.html'";
+ function goahead() {
+		 	//$('#linkeffect').attr('href', 'canvas.html');
+		 	//$('#linkeffect')
+//		 	$('#linkeffect').attr('href', 'canvas.html').mousedown();
+		 }
 	
-	//listener and implementation of range slider values display while changing
+	//listener and implementation of range slidtrigger('click')er values display while changing
 	 
 	fadeinWelcome();
 	 
-
+	var complete = false;
 	maketableLarge();
 	rangesliderDisplay();
 	selectaTopic();
-	
-	
-			 
-	$("#jokhang").mouseenter(function() {
-		 	
-		  $("#jokhang").fadeOut(1000).fadeIn(500);
+	//linktet();
+	linkfunction();
+	 
+		 
 
-  		 }
-  	); 
+	
+	 
+	
+	
+	function linkfunction() {
+	$('#linkeffect').click(function(e){ 
+
+		//$('#linkeffect').attr('href', 'canvas.html');
+		//alert('a#linkeffect').attr('href').val();
+
+		//from http://stackoverflow.com/questions/11510478/click-delay-before-navigating
+    e.preventDefault();                   // prevent default anchor behavior
+    var goTo = this.getAttribute("href"); // store anchor href
+
+    // do something while timeOut ticks ... 
+
+    setTimeout(function(){
+         window.location = goTo;
+    },1500);       
+ 
+		/*setTimeout(function(){
+  		alert("Boom!");
+		}, 3000).setTimeout( function() {
+			$('#linkeffect').attr("href", "canvas.html").mousedown();
+		}, 1000);
+	 */
+			$('section').filter(':odd').slideUp(500, function () {$('section').delay(1000).filter(':even').slideUp(500, function() {
+				//alert('ha');
+				 
+			$('header').slideUp();
+			$('#linkeffect').click();
+			$('#linkeffect').attr('href', 'canvas.html');
+			//alert($('#leftcol').height());
+			 
+			
+			//$('#linkeffect a').click();
+		});});
+		
+		
+
+				 
+		 
+ 	
+	});		
+}
+ 
+			
+		
+		 
+	
+	 
+
+
+			 
+	 
 
   	//dealing with form
    $('#userinfo').submit(function(a) {

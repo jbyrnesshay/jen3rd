@@ -321,19 +321,21 @@ img#tripimage {
  }
 #tripvibe{
 	width: 140px;
-	font-size: 1em;
+	font-size: 1.1em;
 	font-style: bolder;
 	padding: .15em;
 	border-radius: 15px;
 	text-transform: uppercase;
-	background: black;
-	color: white;
+	background: white;
+	color: black;
 	position: relative;
 	margin-bottom: 0;
 	top: -.15em;
 	display:inline-block;
+	border: 3px solid black;
 	 
 }
+ 
 #centercol form {
 	display: inline-block;
 	padding: 0;
@@ -357,7 +359,7 @@ img#tripimage {
 	text-align: center;
 	margin: .5em auto 0 auto;
 	height: 15.5em;
-	border-radius: 15px;
+	border-radius: 10px;
 	display:none;
 
 }
@@ -366,6 +368,7 @@ img#tripimage {
 	background: aqua;
 	position: absolute;
 	height: 13em;
+	border-radius: 15px;
 }
  
 /* overall site 3-column layout styling, some of which is overridden where needed by styling blocks for page 2 below*/
@@ -395,6 +398,13 @@ img#tripimage {
 	height:60%;
 	max-width: 40%;
 	padding: 0 25px 0 25px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5fcff+0,f7fdff+50,f7fdff+51,fbfeff+100 */
+background: #f5fcff; /* Old browsers */
+background: -moz-linear-gradient(top,  #f5fcff 0%, #f7fdff 50%, #f7fdff 51%, #fbfeff 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #f5fcff 0%,#f7fdff 50%,#f7fdff 51%,#fbfeff 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #f5fcff 0%,#f7fdff 50%,#f7fdff 51%,#fbfeff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5fcff', endColorstr='#fbfeff',GradientType=0 ); /* IE6-9 */
+
 	 
 }
 /*background image for centercol*/
@@ -538,7 +548,7 @@ a[href*="jigsaw"]:hover, a[href*="nu"]:hover {
 	border: 1px solid black;
 	border-radius: 10px;
 	width: 80%;
-	margin: 0 auto 0 0;
+	margin: 0 auto;
 	text-transform: uppercase;
 	font-size: .9em;
 	font-weight:bold;
