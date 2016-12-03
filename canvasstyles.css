@@ -92,6 +92,23 @@ header label {
  	margin-bottom: 1em;
 
  }
+ a#emailsend {
+ 	text-decoration:none;
+ 	border: 1px solid black;
+ 	border-radius: 15px;
+ 	padding: .5em;
+ 	background: #F4F4F4;
+ 	color: black;
+ 	text-align:center;
+ 	font-style: bolder;
+ 	font-size: 1.2em;
+ 	display: inline-block;
+ 	position: absolute;
+ 	width: 100px;
+ }
+ a#emailsend:hover {
+ 	color: red;
+ }
  #emailnotice {
  	font-size: 1em;
  	border-bottom: 5px solid red;

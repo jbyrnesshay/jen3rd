@@ -294,10 +294,12 @@ function showemail() {
 function handleemail() {
 	$('#emailsend').click(function() {
 			var recipient = $('#emailrecipient').val();
-			var subject = $('#emailsubject').val;
-			var message = $('#emailmessage').val;
+			var subject = $('#emailsubject').val();
+			var message = $('#emailmessage').val();
 			var mailhref = "mailto:"+recipient+"?subject="+subject+"&body="+message;
-	})
+			 
+			$('#emailsend').attr("href", mailhref);
+	});
 	 
 }
 
