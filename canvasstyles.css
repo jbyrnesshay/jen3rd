@@ -51,6 +51,8 @@ background: linen;
 padding-top: .5em;
 color: black;
 border-radius: 10px;
+display: block;
+height: 5em;
 }
 #canvasPage #instructions {
 	padding:.5em 2em .5em 2em;
@@ -91,6 +93,12 @@ header label {
 #emailrecipient, #emailsubject {
  	margin-bottom: 1em;
 
+ }
+ label#namerequest {
+ 	display: inline-block;
+ }
+ #yourname {
+ 	display:inline-block;
  }
  a#emailsend {
  	text-decoration:none;
