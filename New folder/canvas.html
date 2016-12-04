@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>canvas</title>
+  <meta charset="utf-8">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Allerta" rel="stylesheet">
+    <script src="https://use.fontawesome.com/8b1c1f159f.js"></script>
+    <link href="canvasstyles.css" rel="stylesheet" type="text/css">
+    
+  </head>
+  <body id="canvasPage">
+  
+          
+    <header>
+      <!-- for screenreaders that are not up-to-date and for the purposes of the course requirements -->
+      <nav role="navigation">
+         
+        <h1> My JCanvas page </h1>
+         
+        <a href="#canvasmaincontent" class="sronly">skip to main content</a>
+        <ul>
+          <li> <a href="index.html"><i class="fa fa-home" aria-hidden='true'></i>Home</a> </li>
+          <li> <a id="linkeffect" href="canvas.html">canvas</a></li>
+          <!--<li> <a href="canvas.html">canvas</a></li>-->
+          
+        </ul>
+      </nav>
+      <br class="clearfix">
+      
+      <!-- both h1 and link of class .sronly, found within the nav are floated-->
+    </header>
+    <!-- main on each page of the site have been given ids to help make targeted selectors as necessary for each page--> 
+    <!-- page 1 and page 2 main sections have ids of #pg1maincontent and #pg2maincontent respectively -->
+    <main id="canvascontent">
+
+     
+
+    <!-- start canvas game demo/animation section -->
+    <div id="animwriter">
+      
+      <p id="instructions"> Just a demo.  Choose your character.  Maneuver with keyboard arrow keys.  Visit the labelled targets on the canvas to see the result. </p>
+      <header>
+      <label for ="character" id="selectmessage">select your character shape</label>
+       
+      <select id="character">
+          <option selected value="default">please select</option>
+        	<option value="circle">circle</option>
+        	<option value="square">square</option>
+        	<option value="pie">pie slice</option>
+      </select>
+        <div id="canvasbuttons">
+          <button id ="startfun">start!</button>
+          <button id="restart">clear!</button>
+          </div>
+          <label for="yourname" id="namerequest">your first name?</label>
+          <input type="text" id="yourname">
+          </header>
+          <canvas id="anim" width="800" height="400"></canvas>
+          
+         
+    </div>
+	  <!-- display x and y position  and message window-->
+    <div>
+	    <p id="fill"></p>
+	 </div>
+	 
+ 
+    <div id="right">
+     
+        <h2>opens your default mail client</h2>
+      	<form id="email" novalidate>
+            <label for="emailrecipient">recipient address</label>
+      	   <input type='email' id='emailrecipient' placeholder='email address' required>
+		         <label for="emailsubject">subject</label>
+           <input type='text' id='emailsubject' placeholder='subject'>
+		         <label for="emailmessage">message</label>
+           <textarea id="emailmessage" name='message'></textarea>
+          <!--<a id="emailsend" href="mailto:">send</a>-->
+		  <button id="emailsend" value="submit">send</button>
+		  <button id="closemail" value="submit">close</button>
+		 
+            <!--<button>send email</button>  -->
+           
+ 
+      	</form>
+		 <a id="emailer" href=""></a>
+         
+	 </div>
+</main>
+ 
+
+
+  <script
+ 		 src="https://code.jquery.com/jquery-3.1.1.min.js"
+ 		 integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  			crossorigin="anonymous"></script>
+  			<script src="https://cdnjs.cloudflare.com/ajax/libs/jcanvas/16.7.3/jcanvas.js"></script>
+  			 
+  			 
+  			<script src="anim.js"></script>
+  </body>
+</html>

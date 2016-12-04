@@ -46,12 +46,6 @@ $(document).ready(function() {
 
 
 
-
-
-
-
-
-
 		/*setTimeout(function(){
   		alert("Boom!");
 		}, 3000).setTimeout( function() {
@@ -77,45 +71,6 @@ $(document).ready(function() {
  	
 	});		
 }
-
-
- mainformevents();
-	function mainformevents() {
-	 var ordersectionH3 = "information";
-	 
-	 
-	  
-		 
- 
-	$('#count, label[for="count"]').hover(function(){
-		
-		$('#rightcol h3').text('1 unit =');
-		$('#unitinfo').show();
-		$('#notice').hide();
-	}, 
-	function(){
-		$('#rightcol h3').text(ordersectionH3);
-		$('#unitinfo').hide();
-		$('#notice').show();
-	}
-	);
-	
-	 
- 
-	$('#name').click(function() {
-		$('#rightcol h3').text('tell us who you are');
-		$('#notice').hide();
-		 
-		 
-		
-	});
-	$('#name').mouseleave(function() {
-		$('#rightcol h3').text(ordersectionH3);
-		$('#notice').show();
-	
-	});
-	}
-
  
 			
 		
@@ -274,9 +229,6 @@ $(document).ready(function() {
 **/
  	function selectaTopic() {
 		$('#tripvibe').change(function(){
-			 $('#style2ndcolbar').css("background", "orange");
-			 	$('#style2ndcolbar h2').text('HOVER OVER IMAGE');
-
 		var value = $(this).val();
 		//alert(value);
 		var div = '#'+value;
@@ -338,21 +290,25 @@ $(document).ready(function() {
 	}
 
 function tripimagelistener(){
-	
- 	var left = $('#tripimage').css("left");
+	/*$('#tripimage').hover(function() {
+		$(this).css({"height": "150%", "width": "150%", "position":"relative", "right":"+=10em", "top":"-10em" });
+		$('.bgcontainer').css("overflow", "initial");
+		}, function(){$('#tripimage').css({"top":"+10em", "height":"100%", "width":"100%", "right":"-10em"});});
+*/		var left = $('#tripimage').css("left");
 		var height = $('#tripimage').css("height");
 		var top = $('#tripimage').css("top");
 		var width=$('#tripimage').css('width');
-	 
-			
-			$('#tripimage').hover(function(){$(this).stop().animate({"width": "140%", "height":"60%","left":"-=6.5em", "top":"-=15em"});
+		$('#tripimage').mouseenter(function(){$(this).stop().animate({"width": "140%", "height":"70%","left":"-=6.5em", "top":"-=15em"});
+			 
 			$('#centercol article').css("visibility", "hidden");
-		 	$('#tripimage').css("visibility", "visible")},
-			function(){$(this).stop().animate({"width": width, "height": height,"left":left, "top":top}, function(){
-			 $('#style2ndcolbar h2').text('VACATION TOPICS');
-			 $('#style2ndcolbar').css("background", "lightgrey");
-			$('#centercol article').css("visibility", "visible")}
-		);});
+		 
+
+			$('#tripimage').css("visibility", "visible")})
+		.mouseleave( function(){$(this).stop().animate({"width": width, "height": height,"left":left, "top":top}, function(){
+			 
+			$('#centercol article').css("visibility", "visible")})
+		});
+			
 	
 
 	}

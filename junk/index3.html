@@ -1,0 +1,340 @@
+﻿ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Assignment #2 by Joachim Byrnes-Shay 
+    </title>
+    <meta charset="utf-8">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Allerta" rel="stylesheet">
+    <script src="https://use.fontawesome.com/8b1c1f159f.js">
+    </script>
+  </head>
+  <body id="homepage">
+    <div id="welcome">welcome to my project
+    </div>
+    <div id="container">
+      <header>
+        <!-- for screenreaders that are not up-to-date and for the purposes of the course requirements -->
+        <nav role="navigation">
+          <h1> A 3-Day Adventure in Tibet 
+          </h1>
+          <a href="#pg1maincontent" class="sronly">skip to main content
+          </a>
+          <ul>
+            <li> 
+              <a href="index.html">
+                <i class="fa fa-home" aria-hidden='true'>
+                </i>Home
+              </a> 
+            </li>
+            <li> 
+              <a id="linkeffect" href="canvas.html">canvas
+              </a>
+            </li>
+            <!--<li> <a href="canvas.html">canvas</a></li>-->
+          </ul>
+        </nav>
+        <br class="clearfix">
+        <!-- both h1 and link of class .sronly, found within the nav are floated-->
+      </header>
+      <!-- main on each page of the site have been given ids to help make targeted selectors as necessary for each page--> 
+      <!-- page 1 and page 2 main sections have ids of #pg1maincontent and #pg2maincontent respectively -->
+      <main id="pg1maincontent">
+        <section id="leftcol">
+          <article>
+            <h2> Trip to Tibet Introduction
+            </h2>
+            <!-- this div styles the intro content in left content into 3 columns completely contained within the left column -->
+            <div id="columncount">
+              <p> In January 2016, I went solo on a 3-day trip to 
+                <a href="https://www.travelchinaguide.com/cityguides/tibet/lhasa/">Lhasa, Tibet
+                </a>.  
+              </p>
+              <p>  The distance from my town of Pittsburgh, Pennsylvania to Lhasa, Tibet is 7,556 miles.
+              </p>
+              <p>Lhasa is actually only the 2nd most distant place I've been to.  I've also been to 
+                <a href="https://www.lonelyplanet.com/nepal/kathmandu">Kathmandu, Nepal
+                </a>, which is further (7629 miles), on another trip.  
+              </p>
+              <p>  Lhasa is the site of a number of historic 
+                <a href="itinerary.html#temples">monasteries and temples
+                </a>.  It's one of the few large cities in Tibet but it's a small city by American standards.  It's more equivalent to a large town.
+              </p>
+              <p>From my town of Pittsburgh, Pennsylvania, the quickest you can do the trip to Lhasa is in about 30 hours of travel (one-way).  There are no direct flights from the United States. 
+              </p>
+              <p> Though Lhasa is modernizing,it still has historical sites and old-town areas such as  
+                <a href="itinerary.html#bharkor">Barkhor Square
+                </a> The trip was challenging for a solo traveller.  
+              </p>
+            </div>
+            <!-- the following div tableblock is only for styling table together with accompanying footer -->
+            <!-- table is part of the leftcolumn page 1 article content -->
+            <div id ='position'>
+              <div id="tableblock">
+                <button type="button" id="viewtable"> click to view fullpage table 
+                </button>
+                <table>
+                  <caption> my lhasa trip geography in context 
+                  </caption>
+                  <tr>						
+                    <th scope="row">location
+                    </th>
+                    <th scope="col">pittsburgh
+                    </th>
+                    <th scope="col"> lhasa
+                    </th>
+                    <th scope="col">kathmandu
+                    </th>
+                    <th scope="col">new york
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">distance
+                    </th>
+                    <td>0 miles
+                    </td>
+                    <td>7566 miles
+                    </td>
+                    <td>7629 miles
+                    </td>
+                    <td>370 miles
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">altitude
+                    </th>
+                    <td>765 feet
+                    </td>
+                    <td>12009 feet
+                    </td>
+                    <td>4270 feet
+                    </td>
+                    <td>34 feet
+                    </td>
+                  </tr>
+                </table>
+                <footer>
+                  <p> distance from 
+                    <a href="https://www.distancecalculator.net/">distancecalculator
+                    </a> 
+                  </p>
+                  <p> altitude from 
+                    <a href="http://whatismyelevation.com">whatsmyelevation
+                    </a>
+                  </p>
+                </footer>
+              </div>
+              </position>
+          </article>	
+        </section>
+        <section id="centercol">
+          <div class="bgcontainer">
+            <article>
+              <div id="style2ndcolbar"> 
+                <h2>Vacation topics:  
+                </h2>
+                <form id="test">
+                  <select id = "tripvibe">
+                    <option selected>choose one
+                    </option>
+                    <option value="weather">weather
+                    </option>
+                    <option value="people">people
+                    </option>
+                    <option value="sights">sights
+                    </option>
+                    <option value="food">food
+                    </option>
+                  </select>
+                </form>
+              </div>
+              <div id="display">
+              </div>
+              <section id="weather">
+                <h3>weather
+                </h3>
+                <p>Like in Pittsburgh, in 
+                  <a href="http://www.chinahighlights.com/lhasa/weather/january.htm">January in Lhasa
+                  </a> it was winter too, so it was fairly cold, though not that much colder during the day.  There wasn’t any snow.  I packed light, and didn’t bring a heavy jacket, so I was pretty cold.  The high daily temperature was about 35-40 degrees Fahrenheit, but it was much colder early in the morning and late at night.
+                </p>
+              </section>
+              <section id="people">
+                <h3>People
+                </h3>
+                <p>The people were a mix of ethnic Tibetans and Chinese.  I didn’t get to observe the people much other than to just see them going about their daily business  There were many Chinese police around to keep watch on everything.  It was not the tourist season, so I was one of the few Westerners around.  It coincided with pilgrimage, so there will pilgrims from far away.
+                </p>
+              </section>
+              <section id="sights">
+                <h3> the sights 
+                </h3>
+                <p>Chinese culture is definitely modernizing Lhasa, and the main strips have a small city feel, though there are not any very tall buildings.  It was therefore not overall the image I had in mind of it, which was an image or a less modern society.  There are a few older historical parts of Lhasa that preserve more of the old-fashioned traditional feel.  The monasteries and temples are mostly either museums now, or are have parts that are active but are also  museums or tourist sites at the same time.
+                </p>
+              </section>
+              <section id="food">
+                <h3>The food
+                </h3>
+                <p>A very popular food are 
+                  <dfn>
+                    <a href="http://food.ndtv.com/food-drinks/the-story-of-momos-what-makes-this-tibetan-dumpling-so-popular-1397480">momos
+                    </a>
+                  </dfn>, a type of dumpling, often filled with meat.  The ones I had were filled with yak meat.  The noodle soup I had for breakfast also included yak meat.  Yak meat is very prevalent.  It is the most popular meat, kind of the equivalent of beef, but without the competition that beef has in the United States.  Tibetans are very reliant upon it.  Another traditional breakfast is barley porridge, which I gave a pass. There were some dishes available with vegetables including potatoes, but i was left with the impression that noodles, dumplings, soup, and yak were the main staples.  Unfortunately, time was short and on this trip I didn’t have any butter tea ... a preparation of tea which is made with, you guessed it, yak butter.
+                </p>
+              </section>		 
+            </article>
+          </div>
+        </section>
+        <section id="rightcol">
+          <h2> ORDER TIBETAN FOOD
+          </h2>
+          <aside>
+            <form id="userinfo" novalidate action="" method=""> 
+              <fieldset>
+                <legend>
+                </legend>
+                <!-- add labels, instead of naked text descript -->
+                <label for ="name">your name
+                </label>
+                <input type="text" placeholder="ENTER FIRST NAME" id="name" name="name" aria-required="true" autofocus> 
+                <div id="nameerror">
+                  <br>
+                </div>
+                <br>
+                <label for = "phone">phone number 
+                </label>
+                <input type="tel" id="phone" aria-required="false">
+                <!-- 	
+<label for ="orderemail">your email</label>-->
+                <!--<input type="email" placeholder="enter email" id="orderemail">-->
+                <label for "food">which food?
+                </label>
+                <select id="food">
+                  <option selected>select one
+                  </option>
+                  <option value="momos">momos
+                  </option>
+                  <option value="yak">yak steak
+                  </option>
+                  <option value="barley">barley porridge
+                  </option>
+                  <option value="noodlesoup">noodle soup
+                  </option>
+                  <option value="buttertea">butter tea
+                  </option>
+                </select>
+                <br>
+                <label for ="count"># of units (2-5)
+                </label>
+                <input type ="number" id='count' min='2' max ='5'>
+                <!--<label for = "title" id="titlelab" aria-required="false">add aasgsag? yes </label>
+<input type="checkbox" name="title" id="title" value="yes"></input><br>
+<p id="question">what type of guy are you</p>-->
+                <!--<label>
+<input type="radio" value="decline" name="gender" checked aria-labelledby="question" role="radiogroup" aria-checked="true">decline<br>
+</label>
+<label>
+<input type="radio" value="male" name="gender" checked aria-labelledby="question" role="radiogroup" aria-checked="false">male<br>
+</label>
+<label>
+<label>
+<input type="radio" value="female" name="gender" checked aria-labelledby="question" role="radiogroup" aria-checked="false">female<br>
+</label><label>
+<input type="radio" value="other" name="gender" checked aria-labelledby="question" role="radiogroup" aria-checked="false">other</br>
+</label>-->
+                <!--<label for="email">email</label>
+<input type="email" id="email" aria-required="false">-->
+                <!-- <input type="text" name="search" value="tibet">-->
+              </fieldset>
+              <div id = "rangestyle">
+                <label for = "range">How fast in days do you prefer it shipped?
+                </label>
+                <div id="rangefill">3&nbsp;
+                </div>
+                <input type="range" id = "range" min='3' max='20' value="3" name="rangeval">
+                <br>
+              </div>
+              <br>
+              <div id="timemessage">
+                <p>a good time to go
+                </p>
+              </div>
+              <br>
+              <label for="when" id="goodtime">latest date you will accept delivery?
+              </label>
+              <input type="date" id="when" name="when">
+              <div id="dateerror">
+                <br>
+              </div>
+              <label for ="color">what color packaging do you prefer?
+              </label>
+              <input type="color" id="color" value="#d2b48c" name="color">
+              <div class="msg">
+              </div>
+              <!--<label for ="comments">Special requests: </label>
+<textarea id="comments" placeholder="any additional instructions for me"></textarea>
+-->
+              <input type="submit" value="Submit">
+            </form>
+            <br class="clearfix">
+            <div id="revieworder">
+              <ul>
+                <li>food:
+                </li>
+                <li>units:
+                </li>
+                <li>preferred shipping:
+                </li> 
+                <li>latest acceptable:
+                </li>
+                <li>packaging color:
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </section>
+      </main>
+      <footer id="pagefooter">
+        <!-- footer is overflow:auto to clear its children-->
+        <p id="copywrite">&copy; 2016 by Joachim Byrnes-Shay
+        </p>
+        <div id="contact">
+          <p> contact: 
+          </p>
+          <address>
+            <a href="mailto:jmb464@g.harvard.edu"> Joachim 
+            </a>
+          </address>
+        </div>
+        <!-- link to w3 html validator -->
+        <a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fnightnoise.me%2F">w3c html
+        </a>
+        <!-- method for correctly linking site directly to css validator from https://bryanhadaway.com/how-to-link-to-the-w3c-css3-validation-page/ -->
+        <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://nightnoise.me/styles.css&profile=css3">
+          <img style="border:0;width:88px;height:31px"
+               src="http://jigsaw.w3.org/css-validator/images/vcss"
+               alt="Valid CSS!">
+        </a>
+      </footer>	
+      <script
+              src="https://code.jquery.com/jquery-3.1.1.min.js"
+              integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+              crossorigin="anonymous">
+      </script>
+      <script src="site.js">
+      </script>
+      <script>
+        $('#filling').change(function() {
+          if($('#filling').val() == 'apple'){
+            $('.msg').text('you selected apple');
+          }
+        }
+                            );
+      </script>
+      <style>
+        .msg {
+          margin-bottom: 3em;
+        }
+      </style>
+    </div>
+    <!--end container-->
+  </body>
+</html>

@@ -1,5 +1,5 @@
 
-/*-- CSS by joachim byrnes-shay for assignment 2 */
+ /*-- CSS by joachim byrnes-shay for assignment 2 */
 
 
 
@@ -14,6 +14,11 @@ html {
 .change {
 	background: blue;
 }
+
+        .msg {
+        margin-bottom: 3em;
+        }
+      
 #homepage button {
 	width: 100px;
 	height: 40px;
@@ -24,7 +29,7 @@ body {
     margin: 0;
     padding: 0;
     top: 0;
-    font-family: "Century Gothic", Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     /*allow room for footer with margin-bottom*/
 	margin-bottom: 40px;
 	background: white;
@@ -274,6 +279,7 @@ body {
 #container {
 	 display:none;
 }
+
  
 #welcome {
 	font-size: 5em;
@@ -300,7 +306,7 @@ img#tripimage {
 	display: block;
 	width: 100%;
 	height: 325px;
-	top: 20em;
+	top: 22em;
 	z-index: 110;
 	border-radius: 15px;
 	border: 10px solid black;
@@ -344,7 +350,9 @@ img#tripimage {
  optgroup {
  	border-radius: 15px;
  }
-
+article#unitinfo {
+	display: none;
+}
 #pg1maincontent #centercol section {
 	display:none;
 	margin: 0 auto;
@@ -367,8 +375,10 @@ img#tripimage {
 	margin-top: .25em;
 	background: aqua;
 	position: absolute;
-	height: 16em;
+	height: 17em;
 	border-radius: 15px;
+	text-align: left;
+	padding: .5em;
 }
  
 /* overall site 3-column layout styling, some of which is overridden where needed by styling blocks for page 2 below*/
@@ -408,6 +418,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5fcff', end
 	 
 }
 /*background image for centercol*/
+ 
 .bgcontainer{
     position: relative;
     z-index:1;
@@ -424,10 +435,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5fcff', end
 	margin-top: 4.5em;
 	bottom: 0;
 	padding: 0 25px 0 25px;
+	background: #a2f7eb;
 }
 /* end overall site page styling (3 column format) */
 
 /*style multiple columns for text section inside page's left column article*/
+
+
 #columncount {
 
 -webkit-column-count: 3;
@@ -543,8 +557,8 @@ a[href*="jigsaw"]:hover, a[href*="nu"]:hover {
 
 /* page 1 right column */
 
-#rightcol aside {
-    background: lightgrey;
+#rightcol section {
+    background: #faf0e6;
 	border: 1px solid black;
 	border-radius: 10px;
 	width: 80%;
@@ -557,11 +571,15 @@ a[href*="jigsaw"]:hover, a[href*="nu"]:hover {
 
 
 }
-
+section#information {
+	height: 14em;
+	padding: .5em;
+	background: white;
+}
 
   
 /*styles 'popular foods in tibet' heading, page 1 */
-#rightcol aside h2 {
+#rightcol section h2 {
 	text-align: center;
 	border: 1px solid black;
 	background: orange;
@@ -594,7 +612,10 @@ font-family: serif;
 	border-radius: 10px;
 	position: relative;
 }
-#tableblock img {
+#tableblock button {
+	border-radius: 10px;
+}
+#tableblock img, .fulltable img {
 
 	padding-top: 2em;
 	position: relative; 
@@ -602,6 +623,7 @@ font-family: serif;
 	margin: 0 auto;
 	width: 60%;
 	height:50%;
+	border-radius: 15px;
 }
 .tableBackground {
 	visibility: hidden;
@@ -759,29 +781,38 @@ form {
 	padding: 0 .4em 0 .4em;
 
 }
-#goodtime {
-	background: orange;
+#pg1maincontent input, #rightcol select {
+	margin: 0 auto;
+	display: block;
+	width: 40%;
+	border: 1px solid black;
+	border-radius: 10px;
 }
+
+ 
 input[type='range'] {
-	background: blue;
-	color: blue;
+	 
+	 
 }
 #rangefill {
-	border: 2px solid black;
+	border: 2px solid red;
 	display: inline-block;
-	width: 2em;
-	height: 1.75em;
+	width: 4em;
+	height: 2em;
 	padding: .25em;
-	margin-left: .5em;
+	font-size: 1.2em;
+	font-weight: bolder;
+	background: white;
+	margin: 1em 0 1em 8.5em;
+	 
 }
- 
  
 #rangestyle {
-	background: blue;
+	 
 	padding: .25em;
 }
-#nameerror, #gendererror {
-	height: 1.5em;
+#nameerror {
+	
 }
 .error {
 	border: 2px solid red;
@@ -792,7 +823,8 @@ input[type='range'] {
 }
 
 
+#rightcol input, #rightcol select {
+	margin-bottom: 1.2em;
+	display: block;
+}
 
- #centercol {
- 	top: 0;
- }

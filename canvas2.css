@@ -24,7 +24,7 @@ body {
     margin: 0;
     padding: 0;
     top: 0;
-    font-family: "Century Gothic", Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     /*allow room for footer with margin-bottom*/
 	margin-bottom: 40px;
 	background: white;
@@ -792,7 +792,3 @@ input[type='range'] {
 }
 
 
-
- #centercol {
- 	top: 0;
- }

@@ -1,45 +1,42 @@
 $(document).ready(function(){
 		//sets animateable character figure variable
 		var figure = '';
-		 
+		var status = '';
 		var ty = '';
 		var posy='';
 		var posx='';
 		var test='';
 		var speakinstance = 0;
+
 		//is the game start button clicked
 
 		$('#character').change(function() {
-			 
-				$('#startfun').css("visibility", "visible");
-	
+				$('#startfun').addClass('startedbutton');
+			});
 		$('#startfun').click(function(){
 			
 			 
 		 	 figure = $('#character').val();
+			 if (figure != 'default') {
 			 placeCharacter();
 			 placeSetting();
-			 $('#selectmessage').text('click restart to clear canvas');
-			 //$('#startfun').css({"background": "antiquewhite", "fontStyle":"normal", "fontSize":"1.2em"});
-			 //$('#startfun').css("visibility", "hidden");
-			 $('#startfun, #yourname, label[for="yourname"]').css("visibility", "hidden");
-			 $('#restart').css("visibility", "visible");
+			 $('#selectmessage').text('click clear to clear/restart');
+			 $('#startfun').removeClass('startedbutton');
+			 $('#startfun').css("visibility", "hidden");
+			 //$('#startfun').css({"fontStyle":"normal", "fontSize":"1.2em"});
+			 }
 
 		});
-
 		//restart button functioning
 		$('#restart').click(function() {
 			$('#character').removeClass('disable');
 			$('#anim').removeLayers().drawLayers();
 			$('#character').val('default');
-			$('body').css("background", "white");
-			$('#selectmessage').text('select a character shape')
-			 $('#yourname, label[for="yourname"]').css("visibility", "visible");
-			  $('#restart').css("visibility", "hidden");
-			
+			//$('body').css("background", "white");
+			$('#selectmessage').text('select your character shape')
+			$('#startfun').css("visibility","visible");
 
 		});
-});
 		 
 		 $('#right').hide();
 	 
@@ -95,7 +92,9 @@ $(document).ready(function(){
 					break;
 			 }//end switch
 
-		 
+			 //inspect and display x and y position
+		 	var contents = posx + '&nbsp;&nbsp;&nbsp;' +posy +'&nbsp;&nbsp;&nbsp;' +status;
+		 	$('#fill').html(contents);
 		 	//instance of email form open function below depends on character position as controlled above
 		 	email();
 
@@ -175,8 +174,9 @@ $(document).ready(function(){
 					fillStyle: color,
 					layer: true,
 					name: 'circle',
-					 
-					text: 'what'
+					draggable: true,
+					text: 'what',
+					groups: ['agent']
 				});
 				ty = $('#anim').getLayer('circle');
 				//keep track of x and y in order to implement movement boundaries in keydown function below
@@ -187,13 +187,14 @@ $(document).ready(function(){
 				$('#anim').drawRect({
 					strokeStyle: '#909',
 					strokeWidth: 5,
-					fillStyle: color,
+					fillStyle: 'color',
 					x: 100, y: 100,
 					width: 50,
 					height: 50, 
 					layer: true,
 					name: 'square',
-					 
+					draggable: true,
+					groups: ['agent']
 				});
 				ty = $('#anim').getLayer('square');
 				posx= ty.x;
@@ -208,11 +209,12 @@ $(document).ready(function(){
 					radius: 50,
 					start: 0,
 					end: 90,
-					fillStyle: color,
+					fillStyle: '#f0f',
 					layer: true,
 					name: 'pie',
-					 
-					fromCenter: false
+					draggable: true,
+					fromCenter: false,
+					groups: ['agent']
 				});
 				ty = $('#anim').getLayer('pie');
 				//make adjustments in perceived x, y location for pieslice due to asymmetry
@@ -220,7 +222,7 @@ $(document).ready(function(){
 				posy=ty.y +25;
 			break;
 			default:
-				//alert('you did not select');
+				alert('you did not select');
 				break;
 		}//end switch figure
 	}//end placeCharacter
@@ -228,6 +230,7 @@ $(document).ready(function(){
 	//draw non-character graphics on canvas
 	
  function placeSetting() {
+		
 		 	$('#anim').drawRect({
 				strokeStyle: '#909',
 				strokeWidth: 5,
@@ -312,18 +315,24 @@ function characterspeaks() {
 	//target for opening emailto form
 	function email () {
 		//is x, y position of character at target
+
 		if ((posy <=225 && posy>=175) && (posx >=725 && posx <=775)) {
-			 	 
+			 		status = 'inside email';
 			 		//$('#right').addClass("enable");
 			 		//$('#emailer form').addClass("enable");
-			 		showemail();
+			 		
+					showemail();
+					
+					
+					
+					
 			 		
 		}
 	    else {
 	    	//$('#emailer').removeClass("enable");
 	    	//$('#emailer').removeClass("enable");
 	    	$('#right').slideUp();
-	     
+	    	status = 'not inside email';
 		}
 		 
 	}//end email fucntion
@@ -333,21 +342,42 @@ function characterspeaks() {
 function showemail() {
 	//$('#right').show();
 	//$('#right').slideDown(1500).show();
+	 var thingname= $('#anim').getLayer(0).name;
+	 $('#anim').animateLayer(thingname,{
+	 x: 400});
+	 posx = 400;
 	 
+					//alert(try);
 	
 	$('#right').show(600).animate({
 		 
 		right: "130", height: "450px", top: "160"
 		},1000
 	);//endanimate
+	
 	handleemail();
+	
+	
 	}
+	 
 });
  
 function handleemail() {
-	 
+		$('#closemail').click(function(submit) {
+			$('#right').hide();
+			 
+			  
+			
+			submit.preventDefault();
+			 
+			
+		});
+			
 	//$('#emailsend').click(function() {
 		$('#emailsend').click(function(submit){
+			
+		
+		
 		if ($('#emailrecipient').val().length == 0) {
 			//console.log('you forgot the name field!');
 			$('label[for="emailrecipient"]').html('Enter address.').addClass('error');
