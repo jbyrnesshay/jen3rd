@@ -1,31 +1,25 @@
 $(document).ready(function() {
-	//$('#container').show();
-	
-	
-	
-		
-//var toLoad = $('#linkeffect').attr('href') + "='canvas.html'";
- function goahead() {
-		 	//$('#linkeffect').attr('href', 'canvas.html');
-		 	//$('#linkeffect')
-//		 	$('#linkeffect').attr('href', 'canvas.html').mousedown();
-		 }
-	var count = 1;
-	//listener and implementation of range slidtrigger('click')er values display while changing
+
 	 
 	fadeinWelcome();
 	 
-	var complete = false;
+	 
 	maketableLarge();
 	rangesliderDisplay();
 	selectaTopic();
-	//linktet();
+ 
 	linkfunction();
 	 
 		 
 
 	
-	 
+	 var mailhref = "mailto:"+recipient+"?subject="+subject+"&body="+message;
+			submit.preventDefault()
+			$("#emailer").attr("href", "http://google.com");
+			 
+			 
+			$(location).attr('href', mailhref);
+			
 	
 	
 	function linkfunction() {
@@ -36,20 +30,17 @@ $(document).ready(function() {
 
 		//from http://stackoverflow.com/questions/11510478/click-delay-before-navigating
     e.preventDefault();                   // prevent default anchor behavior
-    var goTo = this.getAttribute("href"); // store anchor href
+    //var goTo = this.getAttribute("href"); // store anchor href
+    var canvaslink ="canvas.html";
+    setTimeout(function() {
+    	$(location).attr('href', canvaslink);
+    }, 1500);
 
     // do something while timeOut ticks ... 
 
-    setTimeout(function(){
+    /*setTimeout(function(){
          window.location = goTo;
-    },1500);       
-
-
-
-
-
-
-
+    },1500);     */  
 
 
 		/*setTimeout(function(){
