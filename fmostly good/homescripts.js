@@ -62,13 +62,11 @@ $(document).ready(function() {
 			if (!($("#tableblock img").length)) {
 				$('#tableblock').append("<img src='images/yak.png'></img>");
 				$("#tableblock #viewtable").html('click to return');
-				$('#tripimage').css("visibility", "hidden");
 			}
 			else {
 				$('#tableblock img').remove();
 				$('#position').css("position", "initial");
 				$("#tableblock #viewtable").html('click to view fullpage table');
-				$('#tripimage').css("visibility", "visible");
 			}//end if/else
 		});//end click
 	}//end maketableLarge
