@@ -1,5 +1,5 @@
 
-/*-- CSS by joachim byrnes-shay for assignment 2 */
+/*-- CSS by joachim byrnes-shay for assignment 3 */
 
 
 
@@ -11,14 +11,6 @@ html {
 	box-sizing: inherit;
 }
 
-.change {
-	background: blue;
-}
-
-        .msg {
-        margin-bottom: 3em;
-        }
-      
 #homepage button {
 	width: 100px;
 	height: 40px;
@@ -41,9 +33,6 @@ body {
 	/*baseline*/
 	position: relative;
 	width:  100%;
-
-	 
-
 }
 
 /* general hover state link styling for site */
@@ -199,12 +188,12 @@ h1, .sr-only {
 	display:inline-block;
 }
 
-/*=== general element and sectioning styling ===*/
+ 
 
 main {
 	overflow: auto;
 }
-/* base link styling for site */
+ 
 main a {
 	font-weight: bold;
 	color: blue;
@@ -219,9 +208,7 @@ select {
 	text-align: center;
 }
 
-/*=== styling of headings, sitewide ===*/
 
-/* googlefont webfont used for h1, h2, h3 sitewide */
 h1, h2, h3 {
 	font-family: 'arial';
 	text-transform: uppercase;
@@ -237,11 +224,14 @@ h2 {
 	background: lightgrey;
 	border-radius: 10px;
 }
+
 #centercol h2 {
 	border-bottom: none;
 	background: none;
 
 }
+
+/*div holding h2, form, select at top of center column, index.html */
 #style2ndcolbar {
 	background: lightgrey;
 	border-radius: 10px;
@@ -263,24 +253,13 @@ h3 {
 } 
 /* end headings styling */
 
-body {
-	 
-}
-.off {
-	display:none;
-}
-#container.off {
-	 display:none;
-	   
-}
-#container.on {
-	display:block;
-}
+ 
+ 
+ /*container is used to help with page load animation*/
 #container {
 	 display:none;
 }
-
- 
+/*styling for page load animation test */
 #welcome {
 	font-size: 5em;
 	position: relative;
@@ -292,40 +271,31 @@ body {
 	top: 4em;
 	font-family: "Century Gothic", sans-serif;
 	display:none;
-
-	  
 }
-h2.imagetitle {
-	text-align: left;
-	margin: 0 auto;
-	 
-	position: absolute;
 
-}
+ 
+/*center column image that appears when select box */
 img#tripimage {
 	display: block;
 	width: 100%;
 	height: 325px;
-	top: 22em;
+	top: 20em;
 	z-index: 110;
 	border-radius: 15px;
 	border: 10px solid black;
 	position: absolute;
-
 	text-align: center;
 	margin: .5em auto 0 auto;
-
-	
-	 
-
 }
  
- #centercol h2 {
+#centercol h2 {
  	display:inline-block;
  	margin-bottom: 0;
  	margin-right: .3em;
- }
-#tripvibe{
+}
+
+/*styling for center column trip topic select box*/ 
+#tripselect {
 	width: 140px;
 	font-size: 1.1em;
 	font-style: bolder;
@@ -339,7 +309,6 @@ img#tripimage {
 	top: -.15em;
 	display:inline-block;
 	border: 3px solid black;
-	 
 }
  
 #centercol form {
@@ -347,30 +316,28 @@ img#tripimage {
 	padding: 0;
 }
  
- optgroup {
- 	border-radius: 15px;
- }
-article#unitinfo {
+/*display none property for unit of foods information in right column form*/
+div#unitinfo {
 	display: none;
 }
+
+/*settings for centercol when center image is hovered over*/
 #pg1maincontent #centercol section {
 	display:none;
 	margin: 0 auto;
 	width: 100%;
-
 }
 
+/*for center column display topic info*/
 #display {
 	width: 100%;
-	
-	 
 	text-align: center;
 	margin: .5em auto 0 auto;
 	height: 17.5em;
 	border-radius: 10px;
 	display:none;
-
 }
+/*center column display topic paragraph*/
 #display p {
 	margin-top: .25em;
 	background: aqua;
@@ -408,26 +375,20 @@ article#unitinfo {
 	height:100%;
 	max-width: 40%;
 	padding: 0 25px 0 25px;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5fcff+0,f7fdff+50,f7fdff+51,fbfeff+100 */
-background: #f5fcff; /* Old browsers */
-background: -moz-linear-gradient(top,  #f5fcff 0%, #f7fdff 50%, #f7fdff 51%, #fbfeff 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  #f5fcff 0%,#f7fdff 50%,#f7fdff 51%,#fbfeff 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  #f5fcff 0%,#f7fdff 50%,#f7fdff 51%,#fbfeff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5fcff', endColorstr='#fbfeff',GradientType=0 ); /* IE6-9 */
+	background: #f5fcff;  
+    background: -webkit-linear-gradient(#f5fcff 0%, #f7fdff 50%, #f7fdff 51%, #fbfeff 100%);
+    background: -o-linear-gradient(#f5fcff 0%, #f7fdff 50%, #f7fdff 51%, #fbfeff 100%);
+    background: linear-gradient(#f5fcff 0%, #f7fdff 50%, #f7fdff 51%, #fbfeff 100%);    
+ }
 
-	 
-}
-/*background image for centercol*/
- 
+
+/*a center column container to help with controlling the center image that scales on hover*/
 .bgcontainer{
     position: relative;
-    z-index:1;
-    
     height: 100%;
 }
 
 #rightcol {
-	/*float: right;*/
 	float: right;
 	width: 30%;
 	word-wrap: break-word;
@@ -437,30 +398,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5fcff', end
 	padding: 0 25px 0 25px;
 	background: #a2f7eb;
 }
-/* end overall site page styling (3 column format) */
+ 
 
 /*style multiple columns for text section inside page's left column article*/
 #columncount {
-
--webkit-column-count: 3;
- -moz-column-count: 3;
- column-count: 3;
- -webkit-column-gap: 30px;
- -moz-column-gap: 30px;
- column-gap: 30px;
+	-webkit-column-count: 3;
+ 	-moz-column-count: 3;
+	 column-count: 3;
+ 	-webkit-column-gap: 30px;
+ 	-moz-column-gap: 30px;
+ 	column-gap: 30px;
 }
 #columncount p {
 	margin-top: .2em;
 	margin-bottom: 0;
 	text-indent: 1em;
 }
-/*fix gap above first column*/
-#leftcol article div p:first-of-type {
-	margin-top: 0;
-}
- 
-
-
 
 
 /*-- begin sitewide footer styling section --*/
@@ -551,9 +504,7 @@ a[href*="jigsaw"]:hover, a[href*="nu"]:hover {
 /* end sitewide footer styling section */ 
 
 
-/*=== page 1-specific styling ===*/
-
-/* page 1 right column */
+ 
 
 #rightcol section {
     background: #faf0e6;
@@ -712,14 +663,50 @@ table + footer p {
 	font-size: .8em;
 	display: block;
 }
-/* end page 1-specific styling section */  
  
-
-  
+/* end table styling */
 
  
+form {
+	position: relative;
+	padding: .5em;
+	
+}
+ 
 
-*/
+#pg1maincontent input, #rightcol select {
+	margin: 0 auto;
+	display: block;
+	width: 40%;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+
+ 
+/* stying for value display of input type range, right column form on index.html */
+#rangefill {
+	border: 2px solid red;
+	display: inline-block;
+	width: 4em;
+	height: 2em;
+	padding: .25em;
+	font-size: 1.2em;
+	font-weight: bolder;
+	background: white;
+	margin: 1em 0 1em 8.5em;
+}
+#rangestyle {
+	padding: .25em;
+}
+
+#rightcol input, #rightcol select {
+	margin-bottom: 1.2em;
+	display: block;
+}
+
+
+
+ 
 
 /*== this was practice to make the site look better if I resized windows==*/
 /*it made the page function better so I kept it in, you may ignore*/
@@ -753,75 +740,3 @@ table + footer p {
 /*end @media only block*/
  
 
-/*new styles */
- 
-form {
-	position: relative;
-	padding: .5em;
-	
-}
-#titlelab {
-	visibility:hidden;
-}
-#timemessage {
-	visibility:hidden;
-	display:none;
-	border: 1px solid black;
-	display: inline-block;
-	position: relative;
-	z-index:5;
-	background: aqua;
-	color: brown;
-	border-radius: 25px;
-	right: -30px;
-	top: -10px;
-	font-size: .75em;
-	padding: 0 .4em 0 .4em;
-
-}
-#pg1maincontent input, #rightcol select {
-	margin: 0 auto;
-	display: block;
-	width: 40%;
-	border: 1px solid black;
-	border-radius: 10px;
-}
-
- 
-input[type='range'] {
-	 
-	 
-}
-#rangefill {
-	border: 2px solid red;
-	display: inline-block;
-	width: 4em;
-	height: 2em;
-	padding: .25em;
-	font-size: 1.2em;
-	font-weight: bolder;
-	background: white;
-	margin: 1em 0 1em 8.5em;
-	 
-}
- 
-#rangestyle {
-	 
-	padding: .25em;
-}
-#nameerror {
-	
-}
-.error {
-	border: 2px solid red;
-	background: orange;
-	color: black;
-	font-weight: bolder
-	font-size: 1em;
-}
-
-
-#rightcol input, #rightcol select {
-	margin-bottom: 1.2em;
-	display: block;
-}

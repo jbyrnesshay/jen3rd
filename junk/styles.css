@@ -261,20 +261,11 @@ h3 {
 body {
 	 
 }
-.off {
-	display:none;
-}
-#container.off {
-	 display:none;
-	   
-}
-#container.on {
-	display:block;
-}
+/*container is used to help with page load animation*/
 #container {
 	 display:none;
 }
- 
+/*styling for page load animation test */
 #welcome {
 	font-size: 5em;
 	position: relative;
@@ -286,16 +277,15 @@ body {
 	top: 4em;
 	font-family: "Century Gothic", sans-serif;
 	display:none;
-
-	  
 }
+
 h2.imagetitle {
 	text-align: left;
 	margin: 0 auto;
-	 
 	position: absolute;
 
 }
+/*center column image that appears when select box */
 img#tripimage {
 	display: block;
 	width: 100%;
